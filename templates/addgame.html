@@ -8,22 +8,98 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            font-family: IRANSans;
+        }
+        .space-top {
+            margin-top: 20px;
+        }
+        th {
+            text-align: right;
+        }
+        .thumbnail{
+            padding: 20px;
+        }
+        label{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+<div class="space-top"></div>
+<div class="container-fluid">
+    <div class="col-md-3">
+        <div class="jumbotron">
+            <p style="text-align: center">Add Game :)</p>
+        </div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="text">Numbers:</label>
+                <input type="text" class="form-control" id="text" name="numbers">
+                <label for="text">Card Number:</label>
+                <input type="text" class="form-control" id="text" name="card">
+            </div>
+            <button name="addorstop" value="true" type="submit" class="btn btn-default">Add Or Stop</button>
+        </form>
+        <div class="space-top"></div>
+        <div class="jumbotron">
+            <p style="text-align: center">Add User :)</p>
+        </div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="text">First Name:</label>
+                <input type="text" class="form-control" id="text" name="fname">
+                <label for="text">Last Name:</label>
+                <input type="text" class="form-control" id="text" name="lname">
+                <label for="text">Phone:</label>
+                <input type="text" class="form-control" id="text" name="phone">
+                <label for="text">Year:</label>
+                <input type="text" class="form-control" id="text" name="year">
+                <label for="text">month:</label>
+                <input type="text" class="form-control" id="text" name="month">
+                <label for="text">Day:</label>
+                <input type="text" class="form-control" id="text" name="day">
+                <label for="text">Card Number:</label>
+                <input type="text" class="form-control" id="text" name="card">
+            </div>
+            <button value="true"  name="adduser" type="submit" class="btn btn-default">Add User</button>
+        </form>
+    </div>
+    <div class="col-md-9">
+        <div style="text-align: center" class="jumbotron">Today Users :)</div>
+            <table style="direction: rtl" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>شماره کارت</th>
+                    <th>تعداد نفرات</th>
+                    <th>ساعت شروع</th>
+                    <th>ساعت پایان</th>
+                    <th>هزینه</th>
+                    <th>واحد</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for element in user_data %}
+                    <tr>
+                        <td>{{ element.user_obj.user.fisrt_name }}</td>
+                        <td>{{ element.user_obj.user.last_name }}</td>
+                        <td>{{ element.user_obj.user.card_number }}</td>
+                        <td>{{ element.user_obj.numbers }}</td>
+                        <td>{{ element.user_obj.start_time | date:"G:i:s" }}</td>
+                        <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
+                        <td>{{ element.price }}</td>
+                        <td>{{ element.point }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
-<div class="container">
-    <br><br>
-    <div class="jumbotron">
-        <p style="text-align: center">Add Game :)</p>
-    </div>
-    <form action="" method="post">
-        {% csrf_token %}
-    <div class="form-group">
-        <label for="text">Card Number:</label>
-        <input type="text" class="form-control" id="text" name="card">
-    </div>
-    <button type="submit" class="btn btn-default">Add Or Stop</button>
-</form>
 </div>
 </body>
 </html>
