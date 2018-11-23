@@ -9,97 +9,223 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-        body{
+        body {
             font-family: IRANSans;
+            background-color: #e2e6c6;
+            color: #123a52;
         }
+
         .space-top {
             margin-top: 20px;
         }
+
         th {
             text-align: right;
         }
-        .thumbnail{
+
+        .thumbnail {
             padding: 20px;
         }
-        label{
+
+        label {
             margin-top: 10px;
+        }
+
+        label {
+            text-align: right;
+            direction: rtl;
+            float: right;
+
+        }
+
+        .jumbotron {
+            background-color: #ead2ac;
+            margin-bottom: 0 !important;
+        }
+        .jumbotron p{
+            color: white !important;
+            font-weight: 700;
+        }
+
+        p {
+            color: #123a52 !important;
+        }
+
+        #today-info {
+            background-color: #59a1ab;
+        }
+
+        #addgame {
+            background-color: #d83844;
+        }
+
+        #adduser {
+            background-color: #95b445;
+        }
+
+        table tr {
+            background-color: transparent !important;
         }
     </style>
 </head>
 <body>
 <div class="space-top"></div>
 <div class="container-fluid">
-    <div class="col-md-3">
-        <div class="jumbotron">
-            <p style="text-align: center">Add Game :)</p>
-        </div>
-        <form class="thumbnail" action="" method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="text">Numbers:</label>
-                <input type="text" class="form-control" id="text" name="numbers">
-                <label for="text">Card Number:</label>
-                <input type="text" class="form-control" id="text" name="card">
-            </div>
-            <button name="addorstop" value="true" type="submit" class="btn btn-default">Add Or Stop</button>
-        </form>
-        <div class="space-top"></div>
-        <div class="jumbotron">
-            <p style="text-align: center">Add User :)</p>
-        </div>
-        <form class="thumbnail" action="" method="post">
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="text">First Name:</label>
-                <input type="text" class="form-control" id="text" name="fname">
-                <label for="text">Last Name:</label>
-                <input type="text" class="form-control" id="text" name="lname">
-                <label for="text">Phone:</label>
-                <input type="text" class="form-control" id="text" name="phone">
-                <label for="text">Year:</label>
-                <input type="text" class="form-control" id="text" name="year">
-                <label for="text">month:</label>
-                <input type="text" class="form-control" id="text" name="month">
-                <label for="text">Day:</label>
-                <input type="text" class="form-control" id="text" name="day">
-                <label for="text">Card Number:</label>
-                <input type="text" class="form-control" id="text" name="card">
-            </div>
-            <button value="true"  name="adduser" type="submit" class="btn btn-default">Add User</button>
-        </form>
-    </div>
     <div class="col-md-9">
-        <div style="text-align: center" class="jumbotron">Today Users :)</div>
-            <table style="direction: rtl" class="table table-striped">
-                <thead>
-                <tr>
-                    <th>نام</th>
-                    <th>نام خانوادگی</th>
-                    <th>شماره کارت</th>
-                    <th>تعداد نفرات</th>
-                    <th>ساعت شروع</th>
-                    <th>ساعت پایان</th>
-                    <th>هزینه</th>
-                    <th>واحد</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for element in user_data %}
+        <div id="today-info" style="text-align: center;margin-bottom: 10px!important;" class="jumbotron">
+            <p style="text-align: center">اطلاعات مشتریان امروز</p></div>
+        <table style="direction: rtl" class="table table-striped">
+            <thead>
+            <tr>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th>تعداد نفرات</th>
+                <th>ساعت شروع</th>
+                <th>ساعت پایان</th>
+                <th>هزینه</th>
+                <th>واحد</th>
+                <th>محاسبه سریع</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for element in user_data %}
+                {% if element.end == 0 %}
                     <tr>
                         <td>{{ element.user_obj.user.fisrt_name }}</td>
                         <td>{{ element.user_obj.user.last_name }}</td>
-                        <td>{{ element.user_obj.user.card_number }}</td>
                         <td>{{ element.user_obj.numbers }}</td>
                         <td>{{ element.user_obj.start_time | date:"G:i:s" }}</td>
                         <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
-                        <td>{{ element.price }}</td>
-                        <td>{{ element.point }}</td>
+                        <td style="font-weight: 700">{{ element.price }}</td>
+                        <td style="font-weight: 700">{{ element.point }}</td>
+                        <td>
+                            <button onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }})"
+                                    data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
+                            </button>
+                        </td>
                     </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+                {% endif %}
+            {% endfor %}
+            {% for element in user_data %}
+                {% if element.end == 1 %}
+                    <tr style="background-color: lightgreen !important;">
+                        <td>{{ element.user_obj.user.fisrt_name }}</td>
+                        <td>{{ element.user_obj.user.last_name }}</td>
+                        <td>{{ element.user_obj.numbers }}</td>
+                        <td>{{ element.user_obj.start_time | date:"G:i:s" }}</td>
+                        <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
+                        <td style="font-weight: 700">{{ element.price }}</td>
+                        <td style="font-weight: 700">{{ element.point }}</td>
+                        <td>
+                            <button disabled
+                                    onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }})"
+                                    data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
+                            </button>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3">
+        <div id="addgame" class="jumbotron">
+            <p style="text-align: center">اضافه کردن بازی</p>
         </div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="text">تعداد نفرات (تنها برای شروع بازی وارد شود ):</label>
+                <input type="text" class="form-control" id="text" name="numbers">
+                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
+                <input type="text" class="form-control" id="text" name="card">
+            </div>
+            <button name="addorstop" value="true" type="submit" class="btn btn-default">شروع بازی یا پایان بازی</button>
+        </form>
+        <div class="space-top"></div>
+        <div id="adduser" class="jumbotron">
+            <p style="text-align: center">اضافه کردن مشتری</p>
+        </div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="text">نام:</label>
+                <input type="text" class="form-control" id="text" name="fname">
+                <label for="text">نام خانوادگی:</label>
+                <input type="text" class="form-control" id="text" name="lname">
+                <label for="text">شماره تماس:</label>
+                <input type="text" class="form-control" id="text" name="phone">
+                <label for="text">روش آشنایی با کافه:</label>
+                <select name="intro" style="height: 100%;direction: rtl;" class="form-control" id="sel1">
+                    <option value="search">جست‌وجوی اینترنت</option>
+                    <option value="friends">معرفی دوستان</option>
+                    <option value="instagram">اینستاگرام</option>
+                    <option value="roomiz">سایت رومیز</option>
+                    <option value="events">شرکت در رویدادها</option>
+                    <option value="other">سایر</option>
+                </select>
+                <label for="text">سال تولد:</label>
+                <input type="text" class="form-control" id="text" name="year">
+                <label for="text">ماه تولد:</label>
+                <input type="text" class="form-control" id="text" name="month">
+                <label for="text">روز تولد:</label>
+                <input type="text" class="form-control" id="text" name="day">
+                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
+                <input type="text" class="form-control" id="text" name="card">
+            </div>
+            <button value="true" name="adduser" type="submit" class="btn btn-default">تایید</button>
+        </form>
+    </div>
 
 </div>
+<div id="calc" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 style="text-align: center" class="modal-title">قیمت به ازای هر نفر</h4>
+            </div>
+            <div class="modal-body">
+                <p style="text-align: center;direction: rtl" id="price-content">
+                    <span id="fullmin"></span> دقیقه
+                    <br><br>
+                    <span id="fullhour"></span> ساعت
+                    <br>
+                    و
+                    <br>
+                    <span id="min"></span> دقیقه
+                    <br><br>
+                    <span id="point"></span> واحد
+                    <br><br>
+                    <span id="price"></span> تومان
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    function calculator(h, m, s) {
+        var now = new Date();
+        var seconds = now.getSeconds();
+        var minutes = now.getMinutes();
+        var hour = now.getHours();
+
+        dt_h = Math.abs(hour - h) * 3600;
+        dt_m = Math.abs(minutes - m) * 60;
+        dt_s = Math.abs(seconds - s);
+
+
+        $("#fullmin").text(parseInt((dt_h + dt_m + dt_s) / 60));
+        $("#fullhour").text(Math.abs(hour - h));
+        $("#point").text((parseInt((dt_h + dt_m + dt_s) / 225)));
+        $("#min").text(Math.abs(minutes - m));
+        $("#price").text(parseInt((dt_h + dt_m + dt_s) / 225) * 500);
+
+    };
+</script>
 </body>
 </html>
