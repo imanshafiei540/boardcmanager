@@ -198,11 +198,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 style="text-align: center" class="modal-title">قیمت به ازای هر نفر</h4>
+                <h4 style="text-align: center" class="modal-title">قیمت کل</h4>
             </div>
             <div class="modal-body">
                 <p style="text-align: center;direction: rtl" id="price-content">
-                    <span id="fullmin"></span> دقیقه
+                    {% comment %}<span id="fullmin"></span> دقیقه
                     <br><br>
                     <span id="fullhour"></span> ساعت
                     <br>
@@ -212,10 +212,8 @@
                     <br><br>
                     <span id="point"></span> واحد
                     <br><br>
-                    <span id="price"></span> تومان
-                    <br><br>
-                    <span>قیمت کل</span>
-                    <br><br>
+                    <span id="price"></span> تومان{% endcomment %}
+
                     <span id="totalprice"></span> تومان
                 </p>
             </div>
@@ -246,11 +244,11 @@
         }
 
 
-        $("#fullmin").text(parseInt((dt_h + dt_m + dt_s) / 60));
+        {% comment %}$("#fullmin").text(parseInt((dt_h + dt_m + dt_s) / 60));
         $("#fullhour").text(Math.abs(hour - h));
         $("#point").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))));
         $("#min").text(Math.abs(minutes - m));
-        $("#price").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500);
+        $("#price").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500);{% endcomment %}
         $("#totalprice").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500 * nums);
 
     };
