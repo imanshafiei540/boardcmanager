@@ -37,6 +37,9 @@ def addgame(request):
                     month = request.POST['month']
                     day = request.POST['day']
                     card = request.POST['card']
+                    card = card.replace("؟", "")
+                    card = card.replace("?", "")
+                    card = card.replace("%", "")
                     new_user = User(fisrt_name=f_name, last_name=l_name, phone=phone, year_of_birth=year,
                                     month_of_birth=month, day_of_birth=day, card_number=card, intro=intro)
                     new_user.save()
