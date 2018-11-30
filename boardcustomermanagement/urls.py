@@ -20,4 +20,5 @@ from cmanager import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^addgame', views.addgame),
+    url(r'^refine', views.refine_users),
 ]

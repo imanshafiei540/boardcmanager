@@ -42,7 +42,8 @@
             background-color: #ead2ac;
             margin-bottom: 0 !important;
         }
-        .jumbotron p{
+
+        .jumbotron p {
             color: white !important;
             font-weight: 700;
         }
@@ -99,7 +100,7 @@
                         <td style="font-weight: 700">{{ element.price }}</td>
                         <td style="font-weight: 700">{{ element.point }}</td>
                         <td>
-                            <button onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }})"
+                            <button onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
                                     data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
                             </button>
                         </td>
@@ -118,7 +119,7 @@
                         <td style="font-weight: 700">{{ element.point }}</td>
                         <td>
                             <button disabled
-                                    onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }})"
+                                    onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
                                     data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
                             </button>
                         </td>
@@ -134,11 +135,18 @@
         </div>
         <form class="thumbnail" action="" method="post">
             {% csrf_token %}
+            {% if is_done_addorstop == 1 %}
+                <div style="text-align: right;direction: rtl;" class="panel-group">
+                    <div class="panel panel-success">
+                        <div class="panel-body">عملیات با موفقیت انجام شد.</div>
+                    </div>
+                </div>
+            {% endif %}
             <div class="form-group">
                 <label for="text">تعداد نفرات (تنها برای شروع بازی وارد شود ):</label>
-                <input type="text" class="form-control" id="text" name="numbers">
+                <input type="text" class="form-control" id="text" name="numbers" autocomplete="off">
                 <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
-                <input type="text" class="form-control" id="text" name="card">
+                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
             </div>
             <button name="addorstop" value="true" type="submit" class="btn btn-default">شروع بازی یا پایان بازی</button>
         </form>
@@ -148,13 +156,20 @@
         </div>
         <form class="thumbnail" action="" method="post">
             {% csrf_token %}
+            {% if is_done_adduser == 1 %}
+                <div style="text-align: right;direction: rtl;" class="panel-group">
+                    <div class="panel panel-success">
+                        <div class="panel-body">ثبت نام با موفقیت انجام شد.</div>
+                    </div>
+                </div>
+            {% endif %}
             <div class="form-group">
                 <label for="text">نام:</label>
-                <input type="text" class="form-control" id="text" name="fname">
+                <input style="direction: rtl" type="text" class="form-control" id="text" name="fname" autocomplete="off">
                 <label for="text">نام خانوادگی:</label>
-                <input type="text" class="form-control" id="text" name="lname">
+                <input style="direction: rtl;" type="text" class="form-control" id="text" name="lname" autocomplete="off">
                 <label for="text">شماره تماس:</label>
-                <input type="text" class="form-control" id="text" name="phone">
+                <input type="text" class="form-control" id="text" name="phone" autocomplete="off">
                 <label for="text">روش آشنایی با کافه:</label>
                 <select name="intro" style="height: 100%;direction: rtl;" class="form-control" id="sel1">
                     <option value="search">جست‌وجوی اینترنت</option>
@@ -164,14 +179,14 @@
                     <option value="events">شرکت در رویدادها</option>
                     <option value="other">سایر</option>
                 </select>
-                <label for="text">سال تولد:</label>
-                <input type="text" class="form-control" id="text" name="year">
-                <label for="text">ماه تولد:</label>
-                <input type="text" class="form-control" id="text" name="month">
                 <label for="text">روز تولد:</label>
-                <input type="text" class="form-control" id="text" name="day">
+                <input type="text" class="form-control" id="text" name="day" autocomplete="off">
+                <label for="text">ماه تولد:</label>
+                <input type="text" class="form-control" id="text" name="month" autocomplete="off">
+                <label for="text">سال تولد:</label>
+                <input type="text" class="form-control" id="text" name="year" autocomplete="off">
                 <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
-                <input type="text" class="form-control" id="text" name="card">
+                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
             </div>
             <button value="true" name="adduser" type="submit" class="btn btn-default">تایید</button>
         </form>
@@ -198,6 +213,10 @@
                     <span id="point"></span> واحد
                     <br><br>
                     <span id="price"></span> تومان
+                    <br><br>
+                    <span>قیمت کل</span>
+                    <br><br>
+                    <span id="totalprice"></span> تومان
                 </p>
             </div>
             <div class="modal-footer">
@@ -208,22 +227,31 @@
     </div>
 </div>
 <script>
-    function calculator(h, m, s) {
+    function calculator(h, m, s, nums) {
+        console.log(nums);
         var now = new Date();
         var seconds = now.getSeconds();
         var minutes = now.getMinutes();
         var hour = now.getHours();
 
-        dt_h = Math.abs(hour - h) * 3600;
-        dt_m = Math.abs(minutes - m) * 60;
-        dt_s = Math.abs(seconds - s);
+        if ((minutes - m) < 0) {
+            dt_h = Math.abs(hour - h - 1) * 3600;
+            dt_m = (60 - Math.abs(minutes - m)) * 60;
+            dt_s = Math.abs(seconds - s);
+        }
+        else {
+            dt_h = Math.abs(hour - h) * 3600;
+            dt_m = Math.abs(minutes - m) * 60;
+            dt_s = Math.abs(seconds - s);
+        }
 
 
         $("#fullmin").text(parseInt((dt_h + dt_m + dt_s) / 60));
         $("#fullhour").text(Math.abs(hour - h));
-        $("#point").text((parseInt((dt_h + dt_m + dt_s) / 225)));
+        $("#point").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))));
         $("#min").text(Math.abs(minutes - m));
-        $("#price").text(parseInt((dt_h + dt_m + dt_s) / 225) * 500);
+        $("#price").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500);
+        $("#totalprice").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500 * nums);
 
     };
 </script>
