@@ -4,6 +4,11 @@
     <title>CHART</title>
     {% load static %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="{% static "fusioncharts-suite-xt/js/fusioncharts.js" %}"></script>
     <script type="text/javascript"
             src="{% static "fusioncharts-suite-xt/js/themes/fusioncharts.theme.fint.js" %}"></script>
@@ -17,8 +22,88 @@
             padding-bottom: 30px;
         }
     </style>
+    <style>
+        body {
+            font-family: IRANSans;
+            background-color: #e2e6c6;
+            color: #123a52;
+        }
+
+        .space-top {
+            margin-top: 20px;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        label {
+            text-align: right;
+            direction: rtl;
+            float: right;
+
+        }
+
+        input {
+            text-align: right;
+        }
+
+        .jumbotron p {
+            color: white !important;
+            font-weight: 700;
+        }
+
+        p {
+            color: #123a52 !important;
+        }
+
+        table tr {
+            background-color: transparent !important;
+        }
+
+        .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+            top: 60px !important;
+        }
+    </style>
 </head>
 <body>
+<div class="space-top"></div>
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="">
+        <div style="float: right" class="col-md-3"></div>
+        <div style="float: right" class="col-md-2">
+            <div class="input-group date" data-provide="datepicker">
+                <input name="fromdate" type="text" class="form-control" placeholder="از تاریخ">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>
+        </div>
+        <div style="float: right" class="col-md-2">
+            <div class="input-group date" data-provide="datepicker">
+                <input name="todate" type="text" class="form-control" placeholder="تا تاریخ">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>
+        </div>
+        <div style="float: right" class="col-md-1">
+            <select name="option" style="direction: rtl;" class="form-control" id="sel1">
+                <option value="monthly">ماهیانه</option>
+                <option value="daily">روزانه</option>
+                <option value="weekly">هفتگی</option>
+            </select>
+        </div>
+        <div style="float: right" class="col-md-1">
+            <button value="true" name="search" style="width: 100%;direction: rtl" class="btn btn-info" type="submit">بگرد!</button>
+        </div>
+    </div>
+</form>
 <section id="col-chart">
     <h2>نمودار میزان فروش کافه</h2>
     <div class="col-md-offset-1" id="chart-1">{{ output|safe }}</div>

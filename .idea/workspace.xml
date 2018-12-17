@@ -2,513 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6856dac-746b-40be-be82-09aec87e1676" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/IRANSans_Bold_0.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/iraniansans.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/fusion-icon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/fusion-icon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcecodepro-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcecodepro-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcecodepro-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcecodepro-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-bold-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-bold-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-bold-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-bold-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-boldit-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-boldit-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-boldit-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-boldit-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-it-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-it-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-it-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-it-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-light-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-light-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-light-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-light-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-lightit-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-lightit-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-lightit-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-lightit-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-regular-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-regular-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semibold-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semibold-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semibold-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semibold-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semiboldit-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semiboldit-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semiboldit-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/fonts/sourcesanspro-semiboldit-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Converters.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Converters.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Core.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Core.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Css.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Css.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Dom.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Dom.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Model.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Model.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Rendering.Gdi.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Rendering.Wpf.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Rendering.Wpf.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Runtime.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Bin/FusionCharts.SharpVectors.Runtime.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/fusioncharts-wrapper-assembly/FusionCharts.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Bin/FusionCharts.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Converters.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Converters.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Core.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Core.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Css.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Css.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Dom.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Dom.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Model.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Model.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Rendering.Gdi.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Rendering.Wpf.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Rendering.Wpf.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Runtime.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Bin/FusionCharts.SharpVectors.Runtime.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/fusioncharts-wrapper-assembly/FusionCharts.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Bin/FusionCharts.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/db.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/chart-export-handler/fcexporter.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/WEB-INF/lib/com.mysql.jdbc_5.1.5.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/WEB-INF/lib/servlet.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/db/development.sqlite3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/apple-touch-icon-precomposed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/fusioncharts/fusioncharts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/screen-reader.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fonts/font-awesome-4.7.0/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/css/fusiondesign.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/angular-1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/angular-2.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/asp-net.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/chart-gallery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/django.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/fc-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/fcxt-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/fm-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/fw-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/java.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/jquery.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/js.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/pc-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/php.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/react.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/ror.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/images/vue.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/assets/scripts/fusiondesign.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/angular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/angular/sample/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/angularjs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/angularjs/js/angular-fusioncharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/angularjs/js/angular-fusioncharts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/angularjs/sample/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Exported_Images/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/FCExporter.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/FCExporter.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/Web.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/chart-export-handler/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/fusioncharts-wrapper-assembly/FusionCharts.XML" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/fusioncharts-wrapper-source/FusionCharts.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Bin/FusionCharts.dll.refresh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Data/jsonData.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Data/xmlData.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Default.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Default.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/AngularGauge.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/AngularGauge.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/ChartExportByExportHandler.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/ChartExportByExportHandler.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/ChartWithXmlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/ChartWithXmlData.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/ClientSide_Export_Enabled.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/ClientSide_Export_Enabled.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/CommonThemeUsage.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/CommonThemeUsage.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/DataBaseExample.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/DataBaseExample.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/DrillDown.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/DrillDown.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/FirstChart.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/FirstChart.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/FirstGauge.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/FirstGauge.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/FirstMap.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/FirstMap.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/Handler/Handler.ashx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/JsonUrlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/JsonUrlData.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/MSCombi3D.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/MSCombi3D.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/MapWithXmlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/MapWithXmlData.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/MsColumn2d.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/MsColumn2d.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/Pie3D.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/Pie3D.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/StackedColumn2DLine.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/StackedColumn2DLine.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/UsaMap.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/UsaMap.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/WidgetWithXmlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/WidgetWithXmlData.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/XmlDataUrl.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Pages/XmlDataUrl.aspx.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Sql-Dump/sales_records_mssql.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Styles/SampleStyleSheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Web.Debug.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-cs/samples/Web.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Exported_Images/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/FCExporter.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/FCExporter.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/Web.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/chart-export-handler/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/fusioncharts-wrapper-assembly/FusionCharts.XML" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/fusioncharts-wrapper-source/FusionCharts.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Bin/FusionCharts.dll.refresh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Data/jsonData.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Data/xmlData.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Default.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Default.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/AngularGauge.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/AngularGauge.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/ChartExportByExportHandler.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/ChartExportByExportHandler.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/ChartWithXmlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/ChartWithXmlData.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/ClientSideExportEnabled.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/ClientSideExportEnabled.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/CommonThemeUsage.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/CommonThemeUsage.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/DataBaseExample.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/DataBaseExample.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/DrillDown.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/DrillDown.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/FirstChart.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/FirstChart.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/FirstGauge.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/FirstGauge.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/FirstMap.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/FirstMap.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/Handler/Handler.ashx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/JsonDataUrl.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/JsonDataUrl.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/MSCOlumn2D.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/MSCOlumn2D.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/MSCombi3D.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/MSCombi3D.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/MapWithXmlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/MapWithXmlData.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/Pie3D.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/Pie3D.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/StackedColumnLine2D.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/StackedColumnLine2D.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/UsaMap.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/UsaMap.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/WidgetWithXmlData.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/WidgetWithXmlData.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/XmlDataUrl.aspx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Pages/XmlDataUrl.aspx.vb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Sql-Dump/sales_records_mssql.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Styles/ChartSampleStyleSheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Web.Debug.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/asp.net-vb/samples/Web.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/fusioncharts-wrapper/fusioncharts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/datahandler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/fusioncharts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/client_side_chart_export.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/drilldown_from_database_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/export_chart_using_export_handler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/fetching_data_from_database.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/fetching_json_data_from_url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/fetching_xml_data_from_url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_angular_gauge_using_dictionary_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_angular_gauge_using_json_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_charts_by_common_theme.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_column2d_chart_using_dictionary_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_column_line_area_combi_using_json_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_map_using_dictionary_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_map_using_json_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_multiseries_StackedColumn2dline_using_json_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_multiseries_column2d_chart_using_json_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/samples/rendering_pie3d_using_json_example.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/templates/catalogue.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/templates/chart-theme.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/templates/static/data/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/templates/static/data/data.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/fusioncharts/wsgi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/django/samples/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/ember/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/ember/sample/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/chart-export-handler/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/fusioncharts-wrapper/FusionCharts.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/Data/jsonData.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/Data/xmlData.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/Index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/Styles/ChartSampleStyleSheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/WEB-INF/FusionCharts.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/ChartExportByExportHandler.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/CommonTheme.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/Handler/RequestHandler.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/MSColumn2D.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/StackedColumn2DLinr.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/angulargauge.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/chartClientSideExport.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/dataBaseExample.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/drillDown.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/first_chart.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/gauge.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/jsonUrlData.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/map.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/msCombi3d.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/pie3d.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/usa_map.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/jsp/xmlUrlData.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/java/samples/WebContent/mysql-dump/drilldownsdb.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/jquery/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/jquery/js/jquery-fusioncharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/jquery/js/jquery-fusioncharts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/jquery/sample/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/chart-export-handler/FCExporter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/chart-export-handler/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/chart-export-handler/Resources/FCExporter_RLE2IMG.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/chart-export-handler/Resources/FCExporter_RLE2PDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/chart-export-handler/Resources/FCExporter_SVG2ALL.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/fusioncharts-wrapper/fusioncharts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/includes/fusioncharts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/mysql-dump/drilldownsdb.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/angular-gauge-sample.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/chart-database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/chart-export-at-client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/chart-export-at-server.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/chart-from-json-url.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/chart-from-xml-url.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/chart-themes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/data/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/data/data.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/drilldown-data-handler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/drilldown.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/mscolumn2d-sample.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/mscombi3d-chart-sample.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/pie3d-chart-sample.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/simple-chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/simple-gauge.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/simple-map.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/stacked-column2d-line-chart-sample.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/php/samples/pages/usa-map-sample.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/react/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/react/js/react-fusioncharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/react/js/react-fusioncharts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/react/sample/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/MIT-LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/assets/javascripts/fusioncharts_exporter/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/assets/javascripts/fusioncharts_exporter/exporter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/assets/stylesheets/fusioncharts_exporter/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/assets/stylesheets/fusioncharts_exporter/exporter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/controllers/fusioncharts_exporter/application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/controllers/fusioncharts_exporter/exporter_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/helpers/fusioncharts_exporter/application_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/helpers/fusioncharts_exporter/exporter_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/models/fusioncharts_exporter/export.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/app/views/layouts/fusioncharts_exporter/application.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/fusioncharts_exporter.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/fusioncharts_exporter/engine.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/fusioncharts_exporter/version.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/generators/fusioncharts_exporter/install/USAGE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/generators/fusioncharts_exporter/install/install_generator.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/generators/fusioncharts_exporter/install/templates/fusioncharts_exporter.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/chart-export-handler/lib/tasks/fusioncharts_exporter_tasks.rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/fusioncharts-wrapper/fusioncharts-rails.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/fusioncharts-wrapper/fusioncharts/rails.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/fusioncharts-wrapper/fusioncharts/rails/chart.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/fusioncharts-wrapper/fusioncharts/rails/version.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/fusioncharts-wrapper/templates/chart.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/config/manifest.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/javascripts/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/javascripts/cable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/javascripts/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/javascripts/data.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/javascripts/samples.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/stylesheets/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/assets/stylesheets/samples.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/channels/application_cable/channel.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/channels/application_cable/connection.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/controllers/application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/controllers/samples_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/helpers/application_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/helpers/samples_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/jobs/application_job.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/mailers/application_mailer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/models/application_record.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/models/sales_record.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/layouts/application.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/layouts/mailer.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/layouts/mailer.text.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/angular-gauge-sample.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/chart-database.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/chart-export-at-server.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/chart-export.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/chart-from-json-url.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/chart-from-xml-url.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/chart-themes.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/drilldown.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/first-chart.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/first-map.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/first-widget.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/mscolumn2d-sample.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/mscombi3d-sample.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/pie3d-sample.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/stacked-column2d-line-chart-sample.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/app/views/samples/usa-map-sample.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config.ru" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/application.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/boot.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/cable.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/credentials.yml.enc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/database.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/environment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/environments/development.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/environments/production.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/environments/test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/application_controller_renderer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/assets.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/backtrace_silencers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/content_security_policy.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/cookies_serializer.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/filter_parameter_logging.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/inflections.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/mime_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/initializers/wrap_parameters.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/locales/en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/master.key" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/puma.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/spring.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/config/storage.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/db/migrate/20180725092631_create_sales_records.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/db/schema.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/db/seeds.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/angular_gauge.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/drill_down_data_handler.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/drilldown.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/first_chart.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/first_map.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/first_widget.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/fusioncharts-rails.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/fusioncharts/rails.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/fusioncharts/rails/chart.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/fusioncharts/rails/version.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/handler.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/mscolumn2d.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/lib/templates/chart.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/log/development.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/422.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/data/data.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/data/data.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/data/drill-down.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/public/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/test/application_system_test_case.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/test/controllers/samples_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/test/fixtures/sales_records.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/test/models/sales_record_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/rubyonrails/samples/test/test_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/vue/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/vue/js/vue-fusioncharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/vue/js/vue-fusioncharts.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/integrations/vue/sample/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.charts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.gantt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.maps.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.overlappedbar2d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.overlappedcolumn2d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.powercharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.treemap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.vml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.widgets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.zoomline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.zoomscatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/maps/fusioncharts.usa.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/maps/fusioncharts.world.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/maps/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.candy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.carbon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.fint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.fusion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.gammel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.ocean.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/themes/fusioncharts.theme.zune.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/license/FusionCharts Suite License Agreement - Evaluation.rtf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/multichart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boardcustomermanagement/urls.py" afterPath="$PROJECT_DIR$/boardcustomermanagement/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmanager/views.py" afterPath="$PROJECT_DIR$/cmanager/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/info.html" afterPath="$PROJECT_DIR$/templates/info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/multichart.html" afterPath="$PROJECT_DIR$/templates/multichart.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -566,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmanager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="293" column="20" lean-forward="true" selection-start-line="293" selection-start-column="20" selection-end-line="293" selection-end-column="20" />
+            <state relative-caret-position="314">
+              <caret line="293" column="20" lean-forward="false" selection-start-line="293" selection-start-column="20" selection-end-line="293" selection-end-column="20" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -581,19 +77,29 @@
       <file leaf-file-name="multichart.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/multichart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="409">
+              <caret line="76" column="16" lean-forward="false" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+              <folding>
+                <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="info.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
               <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -632,8 +138,8 @@
       <find>select</find>
       <find>csrf</find>
       <find>width</find>
-      <find>submit</find>
       <find>GuruP</find>
+      <find>submit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -649,10 +155,10 @@
         <option value="$PROJECT_DIR$/boardcustomermanagement/settings.py" />
         <option value="$PROJECT_DIR$/templates/addgame.html" />
         <option value="$PROJECT_DIR$/boardcustomermanagement/urls.py" />
-        <option value="$PROJECT_DIR$/templates/info.html" />
-        <option value="$PROJECT_DIR$/templates/multichart.html" />
         <option value="$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.js" />
         <option value="$PROJECT_DIR$/cmanager/views.py" />
+        <option value="$PROJECT_DIR$/templates/multichart.html" />
+        <option value="$PROJECT_DIR$/templates/info.html" />
       </list>
     </option>
   </component>
@@ -838,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543585944155</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Giving report from income add&#10;Daily and monthly income add">
+      <created>1545052018074</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545052018074</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -852,8 +365,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -874,6 +388,28 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40386942" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26466382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1139,19 +675,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/multichart.html">
+    <entry file="file://$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="169">
+          <caret line="12" column="104847" lean-forward="false" selection-start-line="12" selection-start-column="104847" selection-end-line="12" selection-end-column="104847" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/info.html">
+    <entry file="file://$PROJECT_DIR$/cmanager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+        <state relative-caret-position="314">
+          <caret line="293" column="20" lean-forward="false" selection-start-line="293" selection-start-column="20" selection-end-line="293" selection-end-column="20" />
           <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/multichart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="76" column="16" lean-forward="false" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1163,20 +710,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmanager/static/fusioncharts-suite-xt/js/fusioncharts.js">
+    <entry file="file://$PROJECT_DIR$/templates/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="12" column="104847" lean-forward="false" selection-start-line="12" selection-start-column="104847" selection-end-line="12" selection-end-column="104847" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmanager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="293" column="20" lean-forward="true" selection-start-line="293" selection-start-column="20" selection-end-line="293" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#4;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
