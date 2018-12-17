@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CHART</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="{% static "fusioncharts-suite-xt/js/fusioncharts.js" %}"></script>
+    <script type="text/javascript"
+            src="{% static "fusioncharts-suite-xt/js/themes/fusioncharts.theme.fint.js" %}"></script>
+    <style>
+        section {
+            padding-top: 50px;
+        }
+        #col-chart h2 {
+            font-family: IRANSans;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<section id="col-chart">
+    <h2>نمودار میزان فروش کافه</h2>
+    <div class="col-md-offset-1" id="chart-1">{{ output|safe }}</div>
+</section>
+</body>
+</html>
