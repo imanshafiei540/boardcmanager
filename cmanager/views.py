@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from cmanager.models import *
 import datetime
+from cmanager.fusioncharts.fusioncharts import FusionCharts
 
 
 def addgame(request):
@@ -79,3 +80,241 @@ def refine_users(request):
         cnum = cnum.replace("؟", "")
         user.card_number = cnum
         user.save()
+
+
+def info(request):
+    if request.method == "POST":
+        if request.POST['search']:
+            todate = request.POST['todate']
+            todate_list = todate.split("/")
+            fromdate = request.POST['fromdate']
+            fromdate_list = fromdate.split("/")
+            option = request.POST['option']
+            if option == "monthly":
+                data_chart = {"chart": {
+                    "caption": "",
+                    "subCaption": "",
+                    "xAxisName": "Months",
+                    "yAxisName": "Price",
+                    "captionFontSize": "14",
+                    "subcaptionFontSize": "14",
+                    "baseFontColor": "#333333",
+                    "baseFont": "Helvetica Neue,Arial",
+                    "subcaptionFontBold": "0",
+                    "paletteColors": "#6baa01,#008ee4",
+                    "usePlotGradientColor": "0",
+                    "bgColor": "#ffffff",
+                    "showBorder": "0",
+                    "showPlotBorder": "0",
+                    "showValues": "0",
+                    "showShadow": "0",
+                    "showAlternateHGridColor": "0",
+                    "showCanvasBorder": "0",
+                    "showXAxisLine": "1",
+                    "xAxisLineThickness": "1",
+                    "xAxisLineColor": "#999999",
+                    "canvasBgColor": "#ffffff",
+                    "divlineAlpha": "100",
+                    "divlineColor": "#999999",
+                    "divlineThickness": "1",
+                    "divLineDashed": "1",
+                    "divLineDashLen": "1",
+                    "legendBorderAlpha": "0",
+                    "legendShadow": "0",
+                    "toolTipColor": "#ffffff",
+                    "toolTipBorderThickness": "0",
+                    "toolTipBgColor": "#000000",
+                    "toolTipBgAlpha": "80",
+                    "toolTipBorderRadius": "2",
+                    "toolTipPadding": "5"
+                },
+                    "categories": [
+                        {
+                            "category": [
+
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "seriesname": "Real Price",
+                            "data": [
+
+                            ]
+                        },
+                        {
+                            "seriesname": "OFF Price",
+                            "data": [
+
+                            ]
+                        }
+                    ]
+                }
+                data = {"months": [], "sums": []}
+                from_year = int(fromdate_list[2])
+                from_year_copy = from_year
+                to_year = int(todate_list[2])
+                from_month = int(fromdate_list[0])
+                to_month = int(todate_list[0])
+                flag = 0
+                for j in range(from_year, to_year + 1):
+                    print(j)
+                    if from_year_copy != to_year and flag == 0:
+                        print(234)
+                        to_month = 12
+                        from_year_copy += 1
+                        flag = 1
+                    elif from_year_copy == to_year and flag == 0:
+                        print(123)
+                        to_month = int(todate_list[0])
+                        from_year_copy += 1
+                        flag = 1
+                    elif from_year_copy != to_year and flag == 1:
+                        print("hiiii")
+                        from_month = 1
+                        to_month = 12
+                        from_year_copy += 1
+                        flag = 0
+                    elif from_year_copy == to_year and flag == 1:
+                        print("byeee")
+                        from_month = 1
+                        to_month = int(todate_list[0])
+                        from_year_copy += 1
+                        flag = 0
+
+                    for i in range(from_month, to_month + 1):
+                        without_membership_price_variable = 0
+                        data_chart['categories'][0]['category'].append(
+                            {'label': str(j) + "-" + str(i)})
+                        data['months'].append(str(j) + "-" + str(i))
+                        targets = Game.objects.filter(add_date__month=i, add_date__year=j)
+                        sum_month = 0
+                        for target in targets:
+                            start = target.start_time
+                            end = target.end_time
+                            timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute,
+                                                                 seconds=start.second)
+                            if str(end) != "00:00:00":
+                                timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+                                t = timedelta_end - timedelta_start
+                                point = int(round(t.total_seconds() / 225))
+                                sum_month += point * 500 * target.numbers
+                                if t.total_seconds() % 3600 > 0:
+                                    without_membership_point = int(t.total_seconds() / 3600) + 1
+                                    without_membership_price = without_membership_point * 8000 * target.numbers
+                                    without_membership_price_variable += without_membership_price
+                                else:
+                                    without_membership_point = int(t.total_seconds() / 3600)
+                                    without_membership_price = without_membership_point * 8000 * target.numbers
+                                    without_membership_price_variable += without_membership_price
+
+                        data_chart['dataset'][0]['data'].append({'value': sum_month})
+                        data_chart['dataset'][1]['data'].append({'value': without_membership_price_variable - sum_month})
+                        data['sums'].append(sum_month)
+
+                line = FusionCharts("msarea", "ex1", "1200", "400", "chart-1", "json", data_chart)
+
+                return render(request, 'multichart.html', {'output': line.render(), 'chartTitle': 'BoardGames Chart'})
+
+            elif option == "weekly":
+                pass
+            elif option == "daily":
+                data_chart = {"chart": {
+                    "caption": "",
+                    "subCaption": "",
+                    "xAxisName": "Days",
+                    "yAxisName": "Price",
+                    "captionFontSize": "14",
+                    "subcaptionFontSize": "14",
+                    "baseFontColor": "#333333",
+                    "baseFont": "Helvetica Neue,Arial",
+                    "subcaptionFontBold": "0",
+                    "paletteColors": "#6baa01,#008ee4",
+                    "usePlotGradientColor": "0",
+                    "bgColor": "#ffffff",
+                    "showBorder": "0",
+                    "showPlotBorder": "0",
+                    "showValues": "0",
+                    "showShadow": "0",
+                    "showAlternateHGridColor": "0",
+                    "showCanvasBorder": "0",
+                    "showXAxisLine": "1",
+                    "xAxisLineThickness": "1",
+                    "xAxisLineColor": "#999999",
+                    "canvasBgColor": "#ffffff",
+                    "divlineAlpha": "100",
+                    "divlineColor": "#999999",
+                    "divlineThickness": "1",
+                    "divLineDashed": "1",
+                    "divLineDashLen": "1",
+                    "legendBorderAlpha": "0",
+                    "legendShadow": "0",
+                    "toolTipColor": "#ffffff",
+                    "toolTipBorderThickness": "0",
+                    "toolTipBgColor": "#000000",
+                    "toolTipBgAlpha": "80",
+                    "toolTipBorderRadius": "2",
+                    "toolTipPadding": "5"
+                },
+                    "categories": [
+                        {
+                            "category": [
+
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "seriesname": "Real Price",
+                            "data": [
+
+                            ]
+                        },
+                        {
+                            "seriesname": "OFF Price",
+                            "data": [
+
+                            ]
+                        }
+                    ]
+                }
+                daily_data = {}
+                targets = Game.objects.filter(add_date__range=(
+                    fromdate_list[2] + "-" + fromdate_list[0] + "-" + fromdate_list[1],
+                    todate_list[2] + "-" + todate_list[0] + "-" + todate_list[1]))
+                for target in targets:
+                    start = target.start_time
+                    end = target.end_time
+                    timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute,
+                                                         seconds=start.second)
+                    if str(end) != "00:00:00":
+                        timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+                        t = timedelta_end - timedelta_start
+                        point = int(round(t.total_seconds() / 225))
+                        price = point * 500 * target.numbers
+                        if t.total_seconds() % 3600 > 0:
+                            without_memebership_point = int(t.total_seconds()/3600) + 1
+
+                            without_memebership_price = without_memebership_point * 8000* target.numbers
+                        else:
+                            without_memebership_point = int(t.total_seconds() / 3600)
+
+                            without_memebership_price = without_memebership_point * 8000 * target.numbers
+
+                        if str(target.add_date) in daily_data:
+                            daily_data[str(target.add_date)][0] += price
+                            daily_data[str(target.add_date)][1] += target.numbers
+                            daily_data[str(target.add_date)][2] += without_memebership_price
+                        else:
+                            daily_data[str(target.add_date)] = [price, target.numbers, without_memebership_price]
+
+
+                for e in sorted(daily_data.items()):
+                    data_chart['categories'][0]['category'].append({'label': e[0] + " ( " + str(e[1][1]) + " )"})
+                    data_chart['dataset'][0]['data'].append({'value': e[1][0]})
+                    data_chart['dataset'][1]['data'].append({'value': e[1][2] - e[1][0]})
+                line = FusionCharts("msarea", "ex1", "1200", "400", "chart-1", "json", data_chart)
+
+                return render(request, 'multichart.html', {'output': line.render(), 'chartTitle': 'BoardGames Chart'})
+
+    return render(request, 'info.html', {})
