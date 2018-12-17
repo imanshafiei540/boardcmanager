@@ -2,6 +2,7 @@ from django.shortcuts import render
 from cmanager.models import *
 import datetime
 from cmanager.fusioncharts.fusioncharts import FusionCharts
+import jdatetime
 
 
 def addgame(request):
@@ -158,25 +159,20 @@ def info(request):
                 to_month = int(todate_list[0])
                 flag = 0
                 for j in range(from_year, to_year + 1):
-                    print(j)
                     if from_year_copy != to_year and flag == 0:
-                        print(234)
                         to_month = 12
                         from_year_copy += 1
                         flag = 1
                     elif from_year_copy == to_year and flag == 0:
-                        print(123)
                         to_month = int(todate_list[0])
                         from_year_copy += 1
                         flag = 1
                     elif from_year_copy != to_year and flag == 1:
-                        print("hiiii")
                         from_month = 1
                         to_month = 12
                         from_year_copy += 1
                         flag = 0
                     elif from_year_copy == to_year and flag == 1:
-                        print("byeee")
                         from_month = 1
                         to_month = int(todate_list[0])
                         from_year_copy += 1
@@ -184,8 +180,9 @@ def info(request):
 
                     for i in range(from_month, to_month + 1):
                         without_membership_price_variable = 0
+                        j_date = jdatetime.date.fromgregorian(day=1,month=i,year=j)
                         data_chart['categories'][0]['category'].append(
-                            {'label': str(j) + "-" + str(i)})
+                            {'label': str(j_date).split("-")[0] + "-" + str(j_date).split("-")[1]})
                         data['months'].append(str(j) + "-" + str(i))
                         targets = Game.objects.filter(add_date__month=i, add_date__year=j)
                         sum_month = 0
@@ -308,9 +305,10 @@ def info(request):
                         else:
                             daily_data[str(target.add_date)] = [price, target.numbers, without_memebership_price]
 
-
                 for e in sorted(daily_data.items()):
-                    data_chart['categories'][0]['category'].append({'label': e[0] + " ( " + str(e[1][1]) + " )"})
+                    greg_date = e[0].split("-")
+                    j_date = jdatetime.date.fromgregorian(day=int(greg_date[2]), month=int(greg_date[1]), year=int(greg_date[0]))
+                    data_chart['categories'][0]['category'].append({'label': str(j_date) + " ( " + str(e[1][1]) + " )"})
                     data_chart['dataset'][0]['data'].append({'value': e[1][0]})
                     data_chart['dataset'][1]['data'].append({'value': e[1][2] - e[1][0]})
                 line = FusionCharts("msarea", "ex1", "1200", "400", "chart-1", "json", data_chart)
