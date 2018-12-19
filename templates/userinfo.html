@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INFO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <style>
+        body {
+            font-family: IRANSans;
+            background-color: #e2e6c6;
+            color: #123a52;
+        }
+
+        .space-top {
+            margin-top: 100px;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        label {
+            text-align: right;
+            direction: rtl;
+            float: right;
+
+        }
+
+        input {
+            text-align: right;
+        }
+
+        .jumbotron p {
+            color: white !important;
+            font-weight: 700;
+        }
+
+        p {
+            color: #123a52 !important;
+        }
+
+        table tr {
+            background-color: transparent !important;
+        }
+
+        .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+            top: 60px !important;
+        }
+    </style>
+</head>
+<body>
+<div class="space-top"></div>
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="">
+        <div style="float: right" class="col-md-4"></div>
+        <div style="float: right" class="col-md-3">
+
+            <input name="card_id" type="text" class="form-control" placeholder="شماره کارت">
+
+        </div>
+        <div style="float: right" class="col-md-1">
+            <button value="true" name="search" style="width: 100%;direction: rtl" class="btn btn-info" type="submit">
+                بگرد!
+            </button>
+        </div>
+    </div>
+</form>
+
+{% if user_data %}
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="space-top"></div>
+            <table style="direction: rtl" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>نام خانوادگی</th>
+                    <th>تعداد نفرات</th>
+                    <th>ساعت شروع</th>
+                    <th>ساعت پایان</th>
+                    <th>هزینه</th>
+                    <th>واحد</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for element in user_data %}
+
+                    <tr>
+                        <td>{{ element.user_obj.user.fisrt_name }}</td>
+                        <td>{{ element.user_obj.user.last_name }}</td>
+                        <td>{{ element.user_obj.numbers }}</td>
+                        <td>{{ element.user_obj.start_time | date:"G:i:s" }}</td>
+                        <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
+                        <td style="font-weight: 700">{{ element.price }}</td>
+                        <td style="font-weight: 700">{{ element.point }}</td>
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+        <p style="text-align: center">کل هزینه: {{ sum }}</p>
+    <p style="text-align: center">کل هزینه بدون تخفیف: {{ without }}</p>
+
+    <p style="text-align: center"> تخفیف: {{ off }}</p>
+{% endif %}
+
+</body>
+</html>

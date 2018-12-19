@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^refine', views.refine_users),
     url(r'^info', views.info),
     url(r'^deleterow', views.delete_row),
+    url(r'^userinfo', views.user_info),
 ]

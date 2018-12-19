@@ -93,6 +93,43 @@ def delete_row(request):
         return redirect('/addgame')
 
 
+def user_info(request):
+    if request.method == "POST":
+        users_list = []
+        sum_user = 0
+        without_membership_price_variable = 0
+        card_number = request.POST['card_id']
+        card_number = card_number.replace("؟", "")
+        card_number = card_number.replace("?", "")
+        card_number = card_number.replace("%", "")
+        user_data = Game.objects.filter(user__card_number=card_number)
+        for e in user_data:
+            start = e.start_time
+            end = e.end_time
+            timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
+            if str(end) != "00:00:00":
+                timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+                t = timedelta_end - timedelta_start
+                point = int(round(t.total_seconds() / 225))
+                sum_user += point * 500 * e.numbers
+                if t.total_seconds() % 3600 > 900:
+                    without_membership_point = int(t.total_seconds() / 3600) + 1
+                    without_membership_price = without_membership_point * 8000 * e.numbers
+                    without_membership_price_variable += without_membership_price
+                else:
+                    without_membership_point = int(t.total_seconds() / 3600)
+                    without_membership_price = without_membership_point * 8000 * e.numbers
+                    without_membership_price_variable += without_membership_price
+                users_list.append(
+                    {'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers})
+
+
+        return render(request, 'userinfo.html',
+                      {"user_data": users_list, "sum": sum_user, "without": without_membership_price_variable, "off": without_membership_price_variable-sum_user})
+    return render(request, 'userinfo.html',
+                  {})
+
+
 def info(request):
     if request.method == "POST":
         if request.POST['search']:
@@ -190,7 +227,7 @@ def info(request):
 
                     for i in range(from_month, to_month + 1):
                         without_membership_price_variable = 0
-                        j_date = jdatetime.date.fromgregorian(day=1,month=i,year=j)
+                        j_date = jdatetime.date.fromgregorian(day=1, month=i, year=j)
                         data_chart['categories'][0]['category'].append(
                             {'label': str(j_date).split("-")[0] + "-" + str(j_date).split("-")[1]})
                         data['months'].append(str(j) + "-" + str(i))
@@ -202,7 +239,8 @@ def info(request):
                             timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute,
                                                                  seconds=start.second)
                             if str(end) != "00:00:00":
-                                timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+                                timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute,
+                                                                   seconds=end.second)
                                 t = timedelta_end - timedelta_start
                                 point = int(round(t.total_seconds() / 225))
                                 sum_month += point * 500 * target.numbers
@@ -216,7 +254,8 @@ def info(request):
                                     without_membership_price_variable += without_membership_price
 
                         data_chart['dataset'][0]['data'].append({'value': sum_month})
-                        data_chart['dataset'][1]['data'].append({'value': without_membership_price_variable - sum_month})
+                        data_chart['dataset'][1]['data'].append(
+                            {'value': without_membership_price_variable - sum_month})
                         data['sums'].append(sum_month)
 
                 line = FusionCharts("msarea", "ex1", "1200", "400", "chart-1", "json", data_chart)
@@ -300,9 +339,9 @@ def info(request):
                         point = int(round(t.total_seconds() / 225))
                         price = point * 500 * target.numbers
                         if t.total_seconds() % 3600 > 0:
-                            without_memebership_point = int(t.total_seconds()/3600) + 1
+                            without_memebership_point = int(t.total_seconds() / 3600) + 1
 
-                            without_memebership_price = without_memebership_point * 8000* target.numbers
+                            without_memebership_price = without_memebership_point * 8000 * target.numbers
                         else:
                             without_memebership_point = int(t.total_seconds() / 3600)
 
@@ -317,7 +356,8 @@ def info(request):
 
                 for e in sorted(daily_data.items()):
                     greg_date = e[0].split("-")
-                    j_date = jdatetime.date.fromgregorian(day=int(greg_date[2]), month=int(greg_date[1]), year=int(greg_date[0]))
+                    j_date = jdatetime.date.fromgregorian(day=int(greg_date[2]), month=int(greg_date[1]),
+                                                          year=int(greg_date[0]))
                     data_chart['categories'][0]['category'].append({'label': str(j_date) + " ( " + str(e[1][1]) + " )"})
                     data_chart['dataset'][0]['data'].append({'value': e[1][0]})
                     data_chart['dataset'][1]['data'].append({'value': e[1][2] - e[1][0]})

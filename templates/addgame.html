@@ -106,7 +106,8 @@
                             </button>
                         </td>
                         <td>
-                            <button onclick="refill_value({{ element.user_obj.pk }})" data-toggle="modal" data-target="#confirmation" class="btn btn-danger calc-btn">
+                            <button onclick="refill_value({{ element.user_obj.pk }})" data-toggle="modal"
+                                    data-target="#confirmation" class="btn btn-danger calc-btn">
                                 <span class="glyphicon glyphicon-fire"></span>
                             </button>
                         </td>
@@ -128,6 +129,12 @@
                                     onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
                                     data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
                             </button>
+                        <td>
+                            <button onclick="refill_value({{ element.user_obj.pk }})" data-toggle="modal"
+                                    data-target="#confirmation" class="btn btn-danger calc-btn">
+                                <span class="glyphicon glyphicon-fire"></span>
+                            </button>
+                        </td>
                         </td>
                     </tr>
                 {% endif %}
@@ -221,7 +228,9 @@
                     <span id="point"></span> واحد
                     <br><br>
                     <span id="price"></span> تومان{% endcomment %}
-
+                    <br>
+                    <span id="min"></span> دقیقه به ازای هر نفر
+                    <br><br>
                     <span id="totalprice"></span> تومان
                 </p>
             </div>
@@ -248,7 +257,9 @@
                             <input class="form-control" type="password" name="password">
                             <br>
                             <input class="form-control" type="hidden" name="deleted_id" value="0">
-                            <button style="width: 100%" value="true" name="deleteconf" type="submit" class="btn btn-info">تایید</button>
+                            <button style="width: 100%" value="true" name="deleteconf" type="submit"
+                                    class="btn btn-info">تایید
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -286,6 +297,7 @@
         $("#point").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))));
         $("#min").text(Math.abs(minutes - m));
         $("#price").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500);{% endcomment %}
+        $("#min").text(Math.abs(minutes - m));
         $("#totalprice").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500 * nums);
 
     };
