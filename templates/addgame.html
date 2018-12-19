@@ -86,6 +86,7 @@
                 <th>هزینه</th>
                 <th>واحد</th>
                 <th>محاسبه سریع</th>
+                <th>حذف سطر</th>
             </tr>
             </thead>
             <tbody>
@@ -102,6 +103,11 @@
                         <td>
                             <button onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
                                     data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="refill_value({{ element.user_obj.pk }})" data-toggle="modal" data-target="#confirmation" class="btn btn-danger calc-btn">
+                                <span class="glyphicon glyphicon-fire"></span>
                             </button>
                         </td>
                     </tr>
@@ -165,9 +171,11 @@
             {% endif %}
             <div class="form-group">
                 <label for="text">نام:</label>
-                <input style="direction: rtl" type="text" class="form-control" id="text" name="fname" autocomplete="off">
+                <input style="direction: rtl" type="text" class="form-control" id="text" name="fname"
+                       autocomplete="off">
                 <label for="text">نام خانوادگی:</label>
-                <input style="direction: rtl;" type="text" class="form-control" id="text" name="lname" autocomplete="off">
+                <input style="direction: rtl;" type="text" class="form-control" id="text" name="lname"
+                       autocomplete="off">
                 <label for="text">شماره تماس:</label>
                 <input type="text" class="form-control" id="text" name="phone" autocomplete="off">
                 <label for="text">روش آشنایی با کافه:</label>
@@ -224,6 +232,35 @@
 
     </div>
 </div>
+
+<div id="confirmation" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 style="text-align: center" class="modal-title">رمز مدیر</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <form action="/deleterow" method="post">
+                            {% csrf_token %}
+                            <input class="form-control" type="password" name="password">
+                            <br>
+                            <input class="form-control" type="hidden" name="deleted_id" value="0">
+                            <button style="width: 100%" value="true" name="deleteconf" type="submit" class="btn btn-info">تایید</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <script>
     function calculator(h, m, s, nums) {
         console.log(nums);
@@ -251,6 +288,10 @@
         $("#price").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500);{% endcomment %}
         $("#totalprice").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500 * nums);
 
+    };
+
+    function refill_value(id) {
+        $('input[name=deleted_id]').val(id);
     };
 </script>
 </body>

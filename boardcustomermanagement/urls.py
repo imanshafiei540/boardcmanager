@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^addgame', views.addgame),
     url(r'^refine', views.refine_users),
     url(r'^info', views.info),
+    url(r'^deleterow', views.delete_row),
 ]

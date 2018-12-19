@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from cmanager.models import *
 import datetime
 from cmanager.fusioncharts.fusioncharts import FusionCharts
@@ -81,6 +81,16 @@ def refine_users(request):
         cnum = cnum.replace("؟", "")
         user.card_number = cnum
         user.save()
+
+
+def delete_row(request):
+    if request.method == "POST":
+        deleted_row_id = request.POST['deleted_id']
+        password = request.POST['password']
+        if password == "zolzolzoli":
+            row = Game.objects.get(pk=deleted_row_id)
+            row.delete()
+        return redirect('/addgame')
 
 
 def info(request):
@@ -196,7 +206,7 @@ def info(request):
                                 t = timedelta_end - timedelta_start
                                 point = int(round(t.total_seconds() / 225))
                                 sum_month += point * 500 * target.numbers
-                                if t.total_seconds() % 3600 > 0:
+                                if t.total_seconds() % 3600 > 900:
                                     without_membership_point = int(t.total_seconds() / 3600) + 1
                                     without_membership_price = without_membership_point * 8000 * target.numbers
                                     without_membership_price_variable += without_membership_price
