@@ -11,6 +11,20 @@ def addgame(request):
     is_done_adduser = 0
     if request.method == "POST":
         try:
+            if request.POST['addcredit'] == "true":
+                if request.POST['password'] == "zolzolzoli":
+                    credit = request.POST['credit']
+                    card_number = request.POST['card']
+                    card_number = card_number.replace("؟", "")
+                    card_number = card_number.replace("?", "")
+                    card_number = card_number.replace("%", "")
+                    user_select = User.objects.get(card_number=card_number)
+                    user_select.credit += int(credit)
+                    user_select.save()
+        except:
+            pass
+
+        try:
             if request.POST['addorstop']:
                 card_number = request.POST['card']
                 card_number = card_number.replace("؟", "")
@@ -20,8 +34,28 @@ def addgame(request):
                 user_select = User.objects.get(card_number=card_number)
                 current_game = Game.objects.filter(user=user_select, end_time="00:00:00")
                 if len(current_game):
+                    credit_user = user_select.credit
                     current_game[0].end_time = datetime.datetime.now().time()
-                    current_game[0].save()
+
+                    start = current_game[0].start_time
+                    end = current_game[0].end_time
+                    timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
+                    if str(end) != "00:00:00":
+                        timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+                        t = timedelta_end - timedelta_start
+                        point = int(round(t.total_seconds() / 225))
+                        credit = current_game[0].credit_used
+                        price = point * 500 * current_game[0].numbers
+                        if price >= credit_user:
+                            current_game[0].credit_used = credit_user
+                            user_select.credit = 0
+                        else:
+                            current_game[0].credit_used = price
+                            user_select.credit = credit_user - price
+                        user_select.save()
+                        current_game[0].save()
+
+
                 else:
                     new_game = Game(user=user_select, start_time=datetime.datetime.now().time(), numbers=nums,
                                     add_date=datetime.datetime.now().date())
@@ -59,14 +93,15 @@ def addgame(request):
             timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
             t = timedelta_end - timedelta_start
             point = int(round(t.total_seconds() / 225))
-            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 1})
+            credit = e.credit_used
+            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 1, "credit": credit})
 
     today_users_not_end = Game.objects.filter(add_date=datetime.datetime.now().date()).order_by('-start_time')
     for e in today_users_not_end:
         point = 0
         end = e.end_time
         if str(end) == "00:00:00":
-            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 0})
+            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 0, "credit": 0})
 
     return render(request, 'addgame.html',
                   {"user_data": users_list, "is_done_addorstop": is_done_addorstop, "is_done_adduser": is_done_adduser})

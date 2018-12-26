@@ -85,6 +85,7 @@
                 <th>ساعت پایان</th>
                 <th>هزینه</th>
                 <th>واحد</th>
+                <th>میزان تخفیف</th>
                 <th>محاسبه سریع</th>
                 <th>حذف سطر</th>
             </tr>
@@ -100,6 +101,7 @@
                         <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
                         <td style="font-weight: 700">{{ element.price }}</td>
                         <td style="font-weight: 700">{{ element.point }}</td>
+                        <td style="font-weight: 700">{{ element.credit }}</td>
                         <td>
                             <button onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
                                     data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
@@ -124,6 +126,7 @@
                         <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
                         <td style="font-weight: 700">{{ element.price }}</td>
                         <td style="font-weight: 700">{{ element.point }}</td>
+                        <td style="font-weight: 700">{{ element.credit }}</td>
                         <td>
                             <button disabled
                                     onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
@@ -205,6 +208,29 @@
             </div>
             <button value="true" name="adduser" type="submit" class="btn btn-default">تایید</button>
         </form>
+        <div id="addgame" class="jumbotron">
+            <p style="text-align: center">اضافه کردن اعتبار به کارت</p>
+        </div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            {% if is_done_addcredit == 1 %}
+                <div style="text-align: right;direction: rtl;" class="panel-group">
+                    <div class="panel panel-success">
+                        <div class="panel-body">عملیات با موفقیت انجام شد.</div>
+                    </div>
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <label for="text">اعتبار ( به تومان ):</label>
+                <input type="text" class="form-control" id="text" name="credit" autocomplete="off">
+                <label for="text">رمز مدیر:</label>
+                <input type="password" class="form-control" id="text" name="password" autocomplete="off">
+                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
+                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
+            </div>
+            <button style="direction: rtl" name="addcredit" value="true" type="submit" class="btn btn-default">اضافه کن!</button>
+        </form>
+        <div class="space-top"></div>
     </div>
 
 </div>

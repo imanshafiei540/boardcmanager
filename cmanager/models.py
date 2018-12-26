@@ -15,6 +15,7 @@ class User(models.Model):
     fisrt_name = models.CharField(max_length=30, null=False)
     last_name = models.CharField(max_length=50, null=False)
     card_number = models.CharField(max_length=20, null=False)
+    credit = models.IntegerField(default=0, null=False)
     phone = models.CharField(max_length=15, null=False)
     intro = models.CharField(max_length=50, choices=INTRO_CHOICES, default='other')
     year_of_birth = models.IntegerField(null=False)
@@ -27,6 +28,7 @@ class User(models.Model):
 
 class Game(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    credit_used = models.IntegerField(default=0, null=False)
     start_time = models.TimeField(null=False)
     end_time = models.TimeField(null=True, default="00:00")
     numbers = models.IntegerField(null=False)
