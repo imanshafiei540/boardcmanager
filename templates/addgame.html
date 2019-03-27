@@ -159,6 +159,8 @@
                 </div>
             {% endif %}
             <div class="form-group">
+                <label for="text">از اعتبار کارت استفاده شود:</label>
+                <input type="checkbox" class="form-control" id="text" name="used_credit" autocomplete="off">
                 <label for="text">تعداد نفرات (تنها برای شروع بازی وارد شود ):</label>
                 <input type="text" class="form-control" id="text" name="numbers" autocomplete="off">
                 <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
@@ -223,8 +225,8 @@
             <div class="form-group">
                 <label for="text">اعتبار ( به تومان ):</label>
                 <input type="text" class="form-control" id="text" name="credit" autocomplete="off">
-                <label for="text">رمز مدیر:</label>
-                <input type="password" class="form-control" id="text" name="password" autocomplete="off">
+                {% comment %}<label for="text">رمز مدیر:</label>
+                <input type="password" class="form-control" id="text" name="password" autocomplete="off">{% endcomment %}
                 <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
                 <input type="text" class="form-control" id="text" name="card" autocomplete="off">
             </div>
