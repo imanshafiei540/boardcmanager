@@ -4,7 +4,6 @@
     <list default="true" id="c6856dac-746b-40be-be82-09aec87e1676" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmanager/views.py" afterPath="$PROJECT_DIR$/cmanager/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/addgame.html" afterPath="$PROJECT_DIR$/templates/addgame.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +20,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/boardcustomermanagement/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
+            <state relative-caret-position="1650">
               <caret line="110" column="13" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
               <folding />
             </state>
@@ -65,12 +64,12 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmanager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+            <state relative-caret-position="138">
+              <caret line="114" column="64" lean-forward="true" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
-                <element signature="e#6157#8071#0" expanded="false" />
-                <element signature="e#8097#19535#0" expanded="false" />
+                <element signature="e#8084#9998#0" expanded="false" />
+                <element signature="e#10024#21462#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -79,8 +78,8 @@
       <file leaf-file-name="addgame.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/addgame.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="162" column="88" lean-forward="true" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
+            <state relative-caret-position="2430">
+              <caret line="162" column="88" lean-forward="false" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -160,10 +159,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="22" />
-    <option name="y" value="69" />
-    <option name="width" value="1402" />
-    <option name="height" value="768" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="822" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -186,8 +184,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545849079721</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="if we want we can use credit now.">
+      <created>1553708723275</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1553708723275</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -397,11 +402,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30350664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36033857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6062407" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33404863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13662376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -480,7 +485,8 @@
     <MESSAGE value="Delete row with manager pass add&#10;off price now after 900 sec from 0" />
     <MESSAGE value="min for cacuator time&#10;personal table for users&#10;delete add to done row" />
     <MESSAGE value="credit actions add" />
-    <option name="LAST_COMMIT_MESSAGE" value="credit actions add" />
+    <MESSAGE value="if we want we can use credit now." />
+    <option name="LAST_COMMIT_MESSAGE" value="if we want we can use credit now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -543,8 +549,8 @@
           <caret line="132" column="18" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#6157#8071#0" expanded="false" />
-            <element signature="e#8097#19535#0" expanded="false" />
+            <element signature="e#8084#9998#0" expanded="false" />
+            <element signature="e#10024#21462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -646,8 +652,8 @@
           <caret line="189" column="53" lean-forward="true" selection-start-line="189" selection-start-column="53" selection-end-line="189" selection-end-column="53" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#6157#8071#0" expanded="false" />
-            <element signature="e#8097#19535#0" expanded="false" />
+            <element signature="e#8084#9998#0" expanded="false" />
+            <element signature="e#10024#21462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -694,8 +700,8 @@
           <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#6157#8071#0" expanded="false" />
-            <element signature="e#8097#19535#0" expanded="false" />
+            <element signature="e#8084#9998#0" expanded="false" />
+            <element signature="e#10024#21462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,8 +756,8 @@
           <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="34" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#6157#8071#0" expanded="false" />
-            <element signature="e#8097#19535#0" expanded="false" />
+            <element signature="e#8084#9998#0" expanded="false" />
+            <element signature="e#10024#21462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -806,8 +812,8 @@
           <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#6157#8071#0" expanded="false" />
-            <element signature="e#8097#19535#0" expanded="false" />
+            <element signature="e#8084#9998#0" expanded="false" />
+            <element signature="e#10024#21462#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -896,7 +902,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/boardcustomermanagement/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
+        <state relative-caret-position="1650">
           <caret line="110" column="13" lean-forward="false" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
           <folding />
         </state>
@@ -904,20 +910,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/addgame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="162" column="88" lean-forward="true" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
+        <state relative-caret-position="2430">
+          <caret line="162" column="88" lean-forward="false" selection-start-line="162" selection-start-column="88" selection-end-line="162" selection-end-column="88" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cmanager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+        <state relative-caret-position="138">
+          <caret line="114" column="64" lean-forward="true" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#6157#8071#0" expanded="false" />
-            <element signature="e#8097#19535#0" expanded="false" />
+            <element signature="e#8084#9998#0" expanded="false" />
+            <element signature="e#10024#21462#0" expanded="false" />
           </folding>
         </state>
       </provider>

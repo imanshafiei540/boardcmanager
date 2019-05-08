@@ -87,7 +87,10 @@ def addgame(request):
             except Exception as e:
                 print(e)
                 print("Nothing!")
+    yesterday = datetime.date.today() - datetime.timedelta(1)
+
     today_users = Game.objects.filter(add_date=datetime.datetime.now().date()).order_by('-end_time')
+    yesterday_users = Game.objects.filter(add_date=yesterday).order_by('-end_time')
     for e in today_users:
         point = 0
         start = e.start_time
@@ -100,9 +103,42 @@ def addgame(request):
             credit = e.credit_used
             users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 1,
                                "credit": credit})
+    for e in yesterday_users:
+        point = 0
+        start = e.start_time
+        end = e.end_time
+        timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
+        timedelta_end_of_the_day = datetime.timedelta(hours=23, minutes=59, seconds=59)
+        if str(end) != "00:00:00":
+            timedelta_start_of_the_day = datetime.timedelta(hours=0, minutes=0, seconds=0)
+            timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+            if end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3:
+                t_one = timedelta_end_of_the_day - timedelta_start
+                t_two = timedelta_end - timedelta_start_of_the_day
+                point_one = int(round(t_one.total_seconds() / 225))
+                point_two = int(round(t_two.total_seconds() / 225))
+                point = point_one + point_two
+            else:
+                t_one = timedelta_end - timedelta_start
+                t_two = 0
+                point_one = int(round(t_one.total_seconds() / 225))
+                point_two = 0
+                point = point_one + point_two
+
+            credit = e.credit_used
+            users_list.append({'user_obj': e, "price": point * 500 * e.numbers,
+                               'point': point * e.numbers, "end": 1,
+                               "credit": credit})
 
     today_users_not_end = Game.objects.filter(add_date=datetime.datetime.now().date()).order_by('-start_time')
+    yesterday_users_not_end = Game.objects.filter(add_date=yesterday).order_by('-start_time')
     for e in today_users_not_end:
+        point = 0
+        end = e.end_time
+        if str(end) == "00:00:00":
+            users_list.append(
+                {'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 0, "credit": 0})
+    for e in yesterday_users_not_end:
         point = 0
         end = e.end_time
         if str(end) == "00:00:00":
@@ -110,7 +146,8 @@ def addgame(request):
                 {'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 0, "credit": 0})
 
     return render(request, 'addgame.html',
-                  {"user_data": users_list, "is_done_addorstop": is_done_addorstop, "is_done_adduser": is_done_adduser, 'is_done_addcredit': is_done_addcredit})
+                  {"user_data": users_list, "is_done_addorstop": is_done_addorstop, "is_done_adduser": is_done_adduser,
+                   'is_done_addcredit': is_done_addcredit})
 
 
 def refine_users(request):
