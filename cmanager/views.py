@@ -46,9 +46,26 @@ def addgame(request):
                     end = current_game[0].end_time
                     timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
                     if str(end) != "00:00:00":
+                        yesterday = datetime.date.today() - datetime.timedelta(1)
+                        timedelta_start_of_the_day = datetime.timedelta(hours=0, minutes=0, seconds=0)
+                        timedelta_end_of_the_day = datetime.timedelta(hours=23, minutes=59, seconds=59)
                         timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
-                        t = timedelta_end - timedelta_start
-                        point = int(round(t.total_seconds() / 225))
+                        if current_game[0].add_date == yesterday:
+                            if end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3:
+                                t_one = timedelta_end_of_the_day - timedelta_start
+                                t_two = timedelta_end - timedelta_start_of_the_day
+                                point_one = int(round(t_one.total_seconds() / 225))
+                                point_two = int(round(t_two.total_seconds() / 225))
+                                point = point_one + point_two
+                            else:
+                                t_one = timedelta_end - timedelta_start
+                                t_two = 0
+                                point_one = int(round(t_one.total_seconds() / 225))
+                                point_two = 0
+                                point = point_one + point_two
+                        else:
+                            t = timedelta_end - timedelta_start
+                            point = int(round(t.total_seconds() / 225))
                         credit = current_game[0].credit_used
                         price = point * 500 * current_game[0].numbers
                         if used_credit == "on":
@@ -103,32 +120,34 @@ def addgame(request):
             credit = e.credit_used
             users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 1,
                                "credit": credit})
-    for e in yesterday_users:
-        point = 0
-        start = e.start_time
-        end = e.end_time
-        timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
-        timedelta_end_of_the_day = datetime.timedelta(hours=23, minutes=59, seconds=59)
-        if str(end) != "00:00:00":
-            timedelta_start_of_the_day = datetime.timedelta(hours=0, minutes=0, seconds=0)
-            timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
-            if end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3:
-                t_one = timedelta_end_of_the_day - timedelta_start
-                t_two = timedelta_end - timedelta_start_of_the_day
-                point_one = int(round(t_one.total_seconds() / 225))
-                point_two = int(round(t_two.total_seconds() / 225))
-                point = point_one + point_two
-            else:
-                t_one = timedelta_end - timedelta_start
-                t_two = 0
-                point_one = int(round(t_one.total_seconds() / 225))
-                point_two = 0
-                point = point_one + point_two
+    hour_of_now = datetime.datetime.now().hour
+    if hour_of_now == 0 or hour_of_now == 1 or hour_of_now == 2 or hour_of_now == 3:
+        for e in yesterday_users:
+            point = 0
+            start = e.start_time
+            end = e.end_time
+            timedelta_start = datetime.timedelta(hours=start.hour, minutes=start.minute, seconds=start.second)
+            timedelta_end_of_the_day = datetime.timedelta(hours=23, minutes=59, seconds=59)
+            if str(end) != "00:00:00":
+                timedelta_start_of_the_day = datetime.timedelta(hours=0, minutes=0, seconds=0)
+                timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
+                if end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3:
+                    t_one = timedelta_end_of_the_day - timedelta_start
+                    t_two = timedelta_end - timedelta_start_of_the_day
+                    point_one = int(round(t_one.total_seconds() / 225))
+                    point_two = int(round(t_two.total_seconds() / 225))
+                    point = point_one + point_two
+                else:
+                    t_one = timedelta_end - timedelta_start
+                    t_two = 0
+                    point_one = int(round(t_one.total_seconds() / 225))
+                    point_two = 0
+                    point = point_one + point_two
 
-            credit = e.credit_used
-            users_list.append({'user_obj': e, "price": point * 500 * e.numbers,
-                               'point': point * e.numbers, "end": 1,
-                               "credit": credit})
+                credit = e.credit_used
+                users_list.append({'user_obj': e, "price": point * 500 * e.numbers,
+                                   'point': point * e.numbers, "end": 1,
+                                   "credit": credit})
 
     today_users_not_end = Game.objects.filter(add_date=datetime.datetime.now().date()).order_by('-start_time')
     yesterday_users_not_end = Game.objects.filter(add_date=yesterday).order_by('-start_time')
