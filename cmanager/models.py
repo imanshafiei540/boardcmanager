@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 
 INTRO_CHOICES = (
@@ -26,6 +27,10 @@ class User(models.Model):
         return self.fisrt_name + " " + self.last_name
 
 
+class UserAdmin(admin.ModelAdmin):
+    search_fields = ('fisrt_name', 'last_name', 'card_number', 'phone')
+
+
 class Game(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     credit_used = models.IntegerField(default=0, null=False)
@@ -35,4 +40,4 @@ class Game(models.Model):
     add_date = models.DateField(null=False)
 
     def __str__(self):
-        return str(self.user.card_number)
+        return str(self.user.card_number) + " + " + str(self.user.last_name)

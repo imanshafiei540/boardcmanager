@@ -131,7 +131,8 @@ def addgame(request):
             if str(end) != "00:00:00":
                 timedelta_start_of_the_day = datetime.timedelta(hours=0, minutes=0, seconds=0)
                 timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
-                if end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3:
+                if (end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3) and (
+                            start.hour != 0 and start.hour != 1 and start.hour != 2):
                     t_one = timedelta_end_of_the_day - timedelta_start
                     t_two = timedelta_end - timedelta_start_of_the_day
                     point_one = int(round(t_one.total_seconds() / 225))
