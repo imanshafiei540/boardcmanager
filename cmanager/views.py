@@ -3,6 +3,8 @@ from cmanager.models import *
 import datetime
 from cmanager.fusioncharts.fusioncharts import FusionCharts
 import jdatetime
+import string
+from random import randint
 
 
 def addgame(request):
@@ -464,3 +466,33 @@ def info(request):
                 return render(request, 'multichart.html', {'output': line.render(), 'chartTitle': 'BoardGames Chart'})
 
     return render(request, 'info.html', {})
+
+
+def generate_gift_code(request):
+    if request.method == "POST":
+        numbers = request.POST['numbers']
+        price = request.POST['price']
+        expired_date = request.POST['expired_date']
+        ex_time_split = expired_date.split('/')
+        ex_time_g = jdatetime.date(int(ex_time_split[2]), int(ex_time_split[1]),
+                                     int(ex_time_split[0])).togregorian()
+        for i in range(0, numbers):
+            while True:
+                generated_code = gen_code()
+                if check_gift_code_exist(generated_code):
+                    new_gift_code = GiftCode(code_name=gen_code(), price=int(price), expired_date=ex_time_g)
+                    break
+    return render(request, 'generate_gift_code.html')
+
+
+def gen_code():
+    data = list(string.ascii_lowercase)
+    [data.append(n) for n in range(0, 10)]
+    gen_code_list = [str(data[randint(0, len(data) - 1)]) for n in range(0, 21)]
+    return ''.join(gen_code_list)
+
+
+def check_gift_code_exist(code):
+    if GiftCode.objects.filter(code_name=code):
+        return True
+    return False

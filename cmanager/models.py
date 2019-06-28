@@ -41,3 +41,10 @@ class Game(models.Model):
 
     def __str__(self):
         return str(self.user.card_number) + " + " + str(self.user.last_name)
+
+
+class GiftCode(models.Model):
+    code_name = models.CharField(max_length=55, null=False)
+    price = models.IntegerField(null=False)
+    created_date = models.DateTimeField(auto_now_add=True, null=False)
+    expired_date = models.DateField(null=True)
