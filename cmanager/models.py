@@ -38,6 +38,7 @@ class Game(models.Model):
     end_time = models.TimeField(null=True, default="00:00")
     numbers = models.IntegerField(null=False)
     add_date = models.DateField(null=False)
+    points = models.IntegerField(null=False)
 
     def __str__(self):
         return str(self.user.card_number) + " + " + str(self.user.last_name)
@@ -48,3 +49,23 @@ class GiftCode(models.Model):
     price = models.IntegerField(null=False)
     created_date = models.DateTimeField(auto_now_add=True, null=False)
     expired_date = models.DateField(null=True)
+
+    def __str__(self):
+        return self.code_name
+
+
+class GiftCodeToUser(models.Model):
+    is_end = models.IntegerField(default=0)
+    gift_code = models.ForeignKey(to=GiftCode, on_delete=models.CASCADE)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.gift_code.code_name + " + " + self.user.last_name
+
+
+class Lottery(models.Model):
+    start_date = models.DateField(null=False)
+    end_date = models.DateField(null=False)
+    prize = models.CharField(max_length=255, null=False)
+    is_give_prize = models.IntegerField(default=0)
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)

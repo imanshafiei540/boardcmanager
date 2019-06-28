@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: IRANSans;
+            background-color: #e2e6c6;
+            color: #123a52;
+        }
+
+        .space-top {
+            margin-top: 20px;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        .thumbnail {
+            padding: 20px;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        label {
+            text-align: right;
+            direction: rtl;
+            float: right;
+
+        }
+
+        .jumbotron {
+            background-color: #ead2ac;
+            margin-bottom: 0 !important;
+        }
+
+        .jumbotron p {
+            color: white !important;
+            font-weight: 700;
+        }
+
+        p {
+            color: #123a52 !important;
+        }
+
+        #today-info {
+            background-color: #59a1ab;
+        }
+
+        #addgame {
+            background-color: #d83844;
+        }
+
+        #adduser {
+            background-color: #95b445;
+        }
+
+        table tr {
+            background-color: transparent !important;
+        }
+    </style>
+</head>
+<body>
+<div class="space-top"></div>
+<div class="container-fluid">
+    <div class="col-md-offset-3 col-md-6">
+        <div id="today-info" style="text-align: center;margin-bottom: 10px!important;" class="jumbotron">
+            <p style="text-align: center">قرعه کشی </p></div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            {% if is_success_start_lottery == 0 and is_success_submit_lottery == 0 %}
+                <div class="form-group">
+                    <label for="text">تاریخ شروع</label>
+                    <input type="text" class="form-control" id="text" name="start_date" autocomplete="off">
+                    <label for="text">تاریخ پایان</label>
+                    <input type="text" class="form-control" id="text" name="end_date" autocomplete="off">
+                </div>
+                <button name="start_lottery" value="true" type="submit" class="btn btn-success">قرعه کشی و تعیین برنده</button>
+            {% endif %}
+            {% if is_success_start_lottery == 1 and is_success_submit_lottery == 0 %}
+                <div class="form-group">
+                    <p style="text-align: right;direction: rtl;font-weight: bold">تاریخ شروع: {{ start_date }}</p>
+                    <input type="hidden" value="{{ start_date }}" class="form-control" id="text" name="start_date"
+                           autocomplete="off">
+                    <p style="text-align: right;direction: rtl;font-weight: bold">تاریخ پایان: {{ end_date }}</p>
+                    <input type="hidden" value="{{ end_date }}" class="form-control" id="text" name="end_date"
+                           autocomplete="off">
+                    <p style="text-align: right;direction: rtl;font-weight: bold">برنده: {{ winner }}</p>
+                    <input type="hidden" value="{{ winner }}" class="form-control" id="text" name="winner"
+                           autocomplete="off">
+                    <label for="text">نام جایزه</label>
+                    <input type="text" class="form-control" id="text" name="prize" autocomplete="off">
+                </div>
+                <button name="submit_lottery" value="true" type="submit" class="btn btn-info">ثبت نهایی</button>
+            {% endif %}
+            {% if is_success_start_lottery == 0 and is_success_submit_lottery == 1 %}
+                <p style="text-align: right;direction: rtl;font-weight: bold">تاریخ شروع: {{ start_date }}</p>
+                <p style="text-align: right;direction: rtl;font-weight: bold">تاریخ پایان: {{ end_date }}</p>
+                <p style="text-align: right;direction: rtl;font-weight: bold">برنده: {{ winner }}</p>
+            {% endif %}
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

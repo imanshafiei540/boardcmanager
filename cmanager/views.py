@@ -5,6 +5,8 @@ from cmanager.fusioncharts.fusioncharts import FusionCharts
 import jdatetime
 import string
 from random import randint
+import xlsxwriter
+from boardcustomermanagement import settings
 
 
 def addgame(request):
@@ -12,6 +14,7 @@ def addgame(request):
     is_done_addorstop = 0
     is_done_adduser = 0
     is_done_addcredit = 0
+    is_done_add_gift_code = 0
     if request.method == "POST":
         try:
             if request.POST['addcredit'] == "true":
@@ -26,6 +29,21 @@ def addgame(request):
                 is_done_addcredit = 1
         except:
             pass
+
+        try:
+            if request.POST['add_gift_code'] == "true":
+                code = request.POST['code']
+                card_number = request.POST['card']
+                card_number = card_number.replace("؟", "")
+                card_number = card_number.replace("?", "")
+                card_number = card_number.replace("%", "")
+                user_select = User.objects.get(card_number=card_number)
+                gift_code = GiftCode.objects.filter(code_name=code).first()
+                user_to_gift = GiftCodeToUser(user=user_select, gift_code=gift_code)
+                user_to_gift.save()
+                is_done_add_gift_code = 1
+        except Exception as e:
+            print(e)
 
         try:
             if request.POST['addorstop']:
@@ -70,14 +88,16 @@ def addgame(request):
                             point = int(round(t.total_seconds() / 225))
                         credit = current_game[0].credit_used
                         price = point * 500 * current_game[0].numbers
-                        if used_credit == "on":
-                            if price >= credit_user:
-                                current_game[0].credit_used = credit_user
-                                user_select.credit = 0
-                            else:
-                                current_game[0].credit_used = price
-                                user_select.credit = credit_user - price
-                            user_select.save()
+                        # if used_credit == "on":
+                        #     if price >= credit_user:
+                        #         current_game[0].credit_used = credit_user
+                        #         user_select.credit = 0
+                        #     else:
+                        #         current_game[0].credit_used = price
+                        #         user_select.credit = credit_user - price
+                        #     user_select.save()
+                        current_game[0].credit_used = payment(card_number, price)
+                        current_game[0].points = point * current_game[0].numbers
                         current_game[0].save()
                 else:
                     new_game = Game(user=user_select, start_time=datetime.datetime.now().time(), numbers=nums,
@@ -134,7 +154,7 @@ def addgame(request):
                 timedelta_start_of_the_day = datetime.timedelta(hours=0, minutes=0, seconds=0)
                 timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
                 if (end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3) and (
-                            start.hour != 0 and start.hour != 1 and start.hour != 2):
+                                    start.hour != 0 and start.hour != 1 and start.hour != 2):
                     t_one = timedelta_end_of_the_day - timedelta_start
                     t_two = timedelta_end - timedelta_start_of_the_day
                     point_one = int(round(t_one.total_seconds() / 225))
@@ -169,7 +189,7 @@ def addgame(request):
 
     return render(request, 'addgame.html',
                   {"user_data": users_list, "is_done_addorstop": is_done_addorstop, "is_done_adduser": is_done_adduser,
-                   'is_done_addcredit': is_done_addcredit})
+                   'is_done_addcredit': is_done_addcredit, 'is_done_add_gift_code': is_done_add_gift_code})
 
 
 def refine_users(request):
@@ -475,24 +495,147 @@ def generate_gift_code(request):
         expired_date = request.POST['expired_date']
         ex_time_split = expired_date.split('/')
         ex_time_g = jdatetime.date(int(ex_time_split[2]), int(ex_time_split[1]),
-                                     int(ex_time_split[0])).togregorian()
-        for i in range(0, numbers):
+                                   int(ex_time_split[0])).togregorian()
+
+        workbook = xlsxwriter.Workbook(settings.MEDIA_ROOT + '/generated_code.xlsx')
+        worksheet = workbook.add_worksheet()
+        row = 0
+        col = 0
+        for i in range(0, int(numbers)):
             while True:
                 generated_code = gen_code()
-                if check_gift_code_exist(generated_code):
-                    new_gift_code = GiftCode(code_name=gen_code(), price=int(price), expired_date=ex_time_g)
+                if not is_gift_code_exist(generated_code):
+                    new_gift_code = GiftCode(code_name=generated_code, price=int(price), expired_date=ex_time_g)
+                    new_gift_code.save()
+                    worksheet.write(row, col, generated_code)
+                    worksheet.write(row, col + 1, price)
+                    worksheet.write(row, col + 2, expired_date)
+                    row += 1
                     break
-    return render(request, 'generate_gift_code.html')
+        workbook.close()
+        return render(request, 'generate_gift_code.html', {'excel_link': 'generated_code.xlsx', 'is_success': 1})
+    return render(request, 'generate_gift_code.html', {'excel_link': '', 'is_success': 0})
 
 
 def gen_code():
     data = list(string.ascii_lowercase)
     [data.append(n) for n in range(0, 10)]
-    gen_code_list = [str(data[randint(0, len(data) - 1)]) for n in range(0, 21)]
+    gen_code_list = [str(data[randint(0, len(data) - 1)]) for n in range(0, 7)]
     return ''.join(gen_code_list)
 
 
-def check_gift_code_exist(code):
-    if GiftCode.objects.filter(code_name=code):
+def is_gift_code_exist(code):
+    if GiftCode.objects.filter(code_name=code).count() != 0:
         return True
     return False
+
+
+def payment(card_number, price):
+    real_price = price
+    now = datetime.datetime.now()
+    user_obj = User.objects.filter(card_number=card_number)
+    all_valid_user_gifts = GiftCodeToUser.objects.filter(user=user_obj, gift_code__expired_date__gt=now.date(),
+                                                         is_end=0)
+    for gift in all_valid_user_gifts:
+        if price > gift.gift_code.price:
+            price -= gift.gift_code.price
+            gift.gift_code.price = 0
+            gift.is_end = 1
+            gift.gift_code.save()
+            gift.save()
+        else:
+            gift.gift_code.price -= price
+            gift.gift_code.save()
+            return real_price
+    return real_price - price
+
+
+def lottery(request):
+    if request.method == "POST":
+        try:
+            if request.POST['start_lottery']:
+                start_date = request.POST['start_date']
+                start_date_split = start_date.split('/')
+                start_date_g = jdatetime.date(int(start_date_split[2]), int(start_date_split[1]),
+                                              int(start_date_split[0])).togregorian()
+
+                end_date = request.POST['end_date']
+                end_date_split = end_date.split('/')
+                end_date_g = jdatetime.date(int(end_date_split[2]), int(end_date_split[1]),
+                                            int(end_date_split[0])).togregorian()
+
+                all_games = Game.objects.filter(add_date__gte=start_date_g, add_date__lte=end_date_g).order_by('add_date')
+                lottery_data = []
+                for game in all_games:
+                    is_user_exist_lottery_data = False
+                    for lot in lottery_data:
+                        if game.user.card_number == lot['card_number']:
+                            is_user_exist_lottery_data = True
+                            if game.add_date in lot['days']:
+                                lot['luck_points'] += float(game.points) * lot['multiplier'] / float(16)
+                            else:
+                                if lot['multiplier'] != 3:
+                                    lot['multiplier'] += 1
+                                lot['days'].append(game.add_date)
+                                lot['luck_points'] += float(game.points) * lot['multiplier'] / float(16)
+                    if not is_user_exist_lottery_data:
+                        lottery_data.append({
+                            'card_number': game.user.card_number,
+                            'multiplier': 1,
+                            'days': [game.add_date],
+                            'luck_points': float(game.points) / float(16)
+                        })
+                winner = do_lottery(lottery_data)
+                return render(request, 'lottery.html', {'start_date': start_date, 'end_date': end_date, 'winner': winner,
+                                                        'is_success_start_lottery': 1, 'is_success_submit_lottery': 0})
+        except Exception as e:
+            print(e)
+
+        try:
+            if request.POST['submit_lottery']:
+                start_date = request.POST['start_date']
+                print(start_date)
+                start_date_split = start_date.split('/')
+                start_date_g = jdatetime.date(int(start_date_split[2]), int(start_date_split[1]),
+                                              int(start_date_split[0])).togregorian()
+                print(start_date_g)
+                end_date = request.POST['end_date']
+                print(end_date)
+                end_date_split = end_date.split('/')
+                end_date_g = jdatetime.date(int(end_date_split[2]), int(end_date_split[1]),
+                                            int(end_date_split[0])).togregorian()
+
+                print(start_date_g)
+                print(end_date_g)
+
+                winner = request.POST['winner']
+                prize = request.POST['prize']
+
+                user = User.objects.filter(card_number=winner).first()
+                new_lot = Lottery(user=user, prize=prize, start_date=start_date_g, end_date=end_date_g)
+                new_lot.save()
+                return render(request, 'lottery.html', {'start_date': start_date, 'end_date': end_date, 'winner': winner,
+                                                        'is_success_start_lottery': 0, 'is_success_submit_lottery': 1})
+        except Exception as e:
+            print(e)
+
+    return render(request, 'lottery.html', {'is_success_start_lottery': 0, 'is_success_submit_lottery': 0})
+
+
+def do_lottery(lot_data):
+    all_luck_points_sum = 0
+    sum_list = []
+    for lot in lot_data:
+        all_luck_points_sum += int(lot['luck_points'])
+        lot['numbers_luck'] = []
+    for i in range(1, all_luck_points_sum + 1):
+        sum_list.append(i)
+    for lot in lot_data:
+        for j in range(0, int(lot['luck_points'])):
+            num_luck = randint(0, len(sum_list) - 1)
+            lot['numbers_luck'].append(sum_list.pop(num_luck))
+    final_winner_num_luck = randint(0, all_luck_points_sum)
+    for lot in lot_data:
+        if final_winner_num_luck in lot['numbers_luck']:
+            final_winner_card_number = lot['card_number']
+            return final_winner_card_number

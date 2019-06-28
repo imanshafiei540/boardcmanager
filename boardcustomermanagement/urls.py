@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from cmanager import views
+from django.views.static import serve
+from boardcustomermanagement import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,4 +26,7 @@ urlpatterns = [
     url(r'^info', views.info),
     url(r'^deleterow', views.delete_row),
     url(r'^userinfo', views.user_info),
+    url(r'^gencode', views.generate_gift_code),
+    url(r'^lottery', views.lottery),
+    url(r'public/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]

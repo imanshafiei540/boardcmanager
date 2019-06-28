@@ -72,86 +72,12 @@
 <body>
 <div class="space-top"></div>
 <div class="container-fluid">
-    <div class="col-md-9">
+    <div class="col-md-offset-3 col-md-6">
         <div id="today-info" style="text-align: center;margin-bottom: 10px!important;" class="jumbotron">
-            <p style="text-align: center">اطلاعات مشتریان امروز</p></div>
-        <table style="direction: rtl" class="table table-striped">
-            <thead>
-            <tr>
-                <th>نام</th>
-                <th>نام خانوادگی</th>
-                <th>تعداد نفرات</th>
-                <th>ساعت شروع</th>
-                <th>ساعت پایان</th>
-                <th>هزینه</th>
-                <th>واحد</th>
-                <th>میزان تخفیف</th>
-                <th>محاسبه سریع</th>
-                <th>حذف سطر</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for element in user_data %}
-                {% if element.end == 0 %}
-                    <tr>
-                        <td>{{ element.user_obj.user.fisrt_name }}</td>
-                        <td>{{ element.user_obj.user.last_name }}</td>
-                        <td>{{ element.user_obj.numbers }}</td>
-                        <td>{{ element.user_obj.start_time | date:"G:i:s" }}</td>
-                        <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
-                        <td style="font-weight: 700">{{ element.price }}</td>
-                        <td style="font-weight: 700">{{ element.point }}</td>
-                        <td style="font-weight: 700">{{ element.credit }}</td>
-                        <td>
-                            <button onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
-                                    data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
-                            </button>
-                        </td>
-                        <td>
-                            <button onclick="refill_value({{ element.user_obj.pk }})" data-toggle="modal"
-                                    data-target="#confirmation" class="btn btn-danger calc-btn">
-                                <span class="glyphicon glyphicon-fire"></span>
-                            </button>
-                        </td>
-                    </tr>
-                {% endif %}
-            {% endfor %}
-            {% for element in user_data %}
-                {% if element.end == 1 %}
-                    <tr style="background-color: lightgreen !important;">
-                        <td>{{ element.user_obj.user.fisrt_name }}</td>
-                        <td>{{ element.user_obj.user.last_name }}</td>
-                        <td>{{ element.user_obj.numbers }}</td>
-                        <td>{{ element.user_obj.start_time | date:"G:i:s" }}</td>
-                        <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
-                        <td style="font-weight: 700">{{ element.price }}</td>
-                        <td style="font-weight: 700">{{ element.point }}</td>
-                        <td style="font-weight: 700">{{ element.credit }}</td>
-                        <td>
-                            <button disabled
-                                    onclick="calculator({{ element.user_obj.start_time | date:"G" }},{{ element.user_obj.start_time | date:"i" }},{{ element.user_obj.start_time | date:"s" }}, {{ element.user_obj.numbers }})"
-                                    data-toggle="modal" data-target="#calc" class="btn btn-info calc-btn">محاسبه قیمت
-                            </button>
-                        <td>
-                            <button onclick="refill_value({{ element.user_obj.pk }})" data-toggle="modal"
-                                    data-target="#confirmation" class="btn btn-danger calc-btn">
-                                <span class="glyphicon glyphicon-fire"></span>
-                            </button>
-                        </td>
-                        </td>
-                    </tr>
-                {% endif %}
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    <div class="col-md-3">
-        <div id="addgame" class="jumbotron">
-            <p style="text-align: center">اضافه کردن بازی</p>
-        </div>
+            <p style="text-align: center">تولید کد تخفیف</p></div>
         <form class="thumbnail" action="" method="post">
             {% csrf_token %}
-            {% if is_done_addorstop == 1 %}
+            {% if is_success == 1 %}
                 <div style="text-align: right;direction: rtl;" class="panel-group">
                     <div class="panel panel-success">
                         <div class="panel-body">عملیات با موفقیت انجام شد.</div>
@@ -159,178 +85,20 @@
                 </div>
             {% endif %}
             <div class="form-group">
-                <label for="text">تعداد نفرات (تنها برای شروع بازی وارد شود ):</label>
-                <input type="text" class="form-control" id="text" name="numbers" autocomplete="off">
-                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
-                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
+                <label for="text">تعداد</label>
+                <input type="number" class="form-control" id="text" name="numbers" autocomplete="off">
+                <label for="text">قیمت کد</label>
+                <input type="number" class="form-control" id="text" name="price" autocomplete="off">
+                <label for="text">تاریخ انقضا</label>
+                <input type="text" class="form-control" id="text" name="expired_date" autocomplete="off">
             </div>
-            <button name="addorstop" value="true" type="submit" class="btn btn-default">شروع بازی یا پایان بازی</button>
-        </form>
-        <div class="space-top"></div>
-        <div id="adduser" class="jumbotron">
-            <p style="text-align: center">اضافه کردن مشتری</p>
-        </div>
-        <form class="thumbnail" action="" method="post">
-            {% csrf_token %}
-            {% if is_done_adduser == 1 %}
-                <div style="text-align: right;direction: rtl;" class="panel-group">
-                    <div class="panel panel-success">
-                        <div class="panel-body">ثبت نام با موفقیت انجام شد.</div>
-                    </div>
-                </div>
+            <button value="true" type="submit" class="btn btn-success">تولید</button>
+            {% if is_success == 1 %}
+                <a href="/public/{{ excel_link }}"><button value="true" type="submit" class="btn btn-info">دانلود فایل اکسل</button></a>
             {% endif %}
-            <div class="form-group">
-                <label for="text">نام:</label>
-                <input style="direction: rtl" type="text" class="form-control" id="text" name="fname"
-                       autocomplete="off">
-                <label for="text">نام خانوادگی:</label>
-                <input style="direction: rtl;" type="text" class="form-control" id="text" name="lname"
-                       autocomplete="off">
-                <label for="text">شماره تماس:</label>
-                <input type="text" class="form-control" id="text" name="phone" autocomplete="off">
-                <label for="text">روش آشنایی با کافه:</label>
-                <select name="intro" style="height: 100%;direction: rtl;" class="form-control" id="sel1">
-                    <option value="search">جست‌وجوی اینترنت</option>
-                    <option value="friends">معرفی دوستان</option>
-                    <option value="instagram">اینستاگرام</option>
-                    <option value="roomiz">سایت رومیز</option>
-                    <option value="events">شرکت در رویدادها</option>
-                    <option value="other">سایر</option>
-                </select>
-                <label for="text">روز تولد:</label>
-                <input type="text" class="form-control" id="text" name="day" autocomplete="off">
-                <label for="text">ماه تولد:</label>
-                <input type="text" class="form-control" id="text" name="month" autocomplete="off">
-                <label for="text">سال تولد:</label>
-                <input type="text" class="form-control" id="text" name="year" autocomplete="off">
-                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
-                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
-            </div>
-            <button value="true" name="adduser" type="submit" class="btn btn-default">تایید</button>
         </form>
-        <div id="addgame" class="jumbotron">
-            <p style="text-align: center">اضافه کردن اعتبار به کارت</p>
-        </div>
-        <form class="thumbnail" action="" method="post">
-            {% csrf_token %}
-            {% if is_done_addcredit == 1 %}
-                <div style="text-align: right;direction: rtl;" class="panel-group">
-                    <div class="panel panel-success">
-                        <div class="panel-body">عملیات با موفقیت انجام شد.</div>
-                    </div>
-                </div>
-            {% endif %}
-            <div class="form-group">
-                <label for="text">اعتبار ( به تومان ):</label>
-                <input type="text" class="form-control" id="text" name="credit" autocomplete="off">
-                {% comment %}<label for="text">رمز مدیر:</label>
-                <input type="password" class="form-control" id="text" name="password" autocomplete="off">{% endcomment %}
-                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
-                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
-            </div>
-            <button style="direction: rtl" name="addcredit" value="true" type="submit" class="btn btn-default">اضافه کن!</button>
-        </form>
-        <div class="space-top"></div>
     </div>
 
 </div>
-<div id="calc" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 style="text-align: center" class="modal-title">قیمت کل</h4>
-            </div>
-            <div class="modal-body">
-                <p style="text-align: center;direction: rtl" id="price-content">
-                    {% comment %}<span id="fullmin"></span> دقیقه
-                    <br><br>
-                    <span id="fullhour"></span> ساعت
-                    <br>
-                    و
-                    <br>
-                    <span id="min"></span> دقیقه
-                    <br><br>
-                    <span id="point"></span> واحد
-                    <br><br>
-                    <span id="price"></span> تومان{% endcomment %}
-                    <br>
-                    <span id="min"></span> دقیقه به ازای هر نفر
-                    <br><br>
-                    <span id="totalprice"></span> تومان
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div id="confirmation" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 style="text-align: center" class="modal-title">رمز مدیر</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-offset-3 col-md-6">
-                        <form action="/deleterow" method="post">
-                            {% csrf_token %}
-                            <input class="form-control" type="password" name="password">
-                            <br>
-                            <input class="form-control" type="hidden" name="deleted_id" value="0">
-                            <button style="width: 100%" value="true" name="deleteconf" type="submit"
-                                    class="btn btn-info">تایید
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<script>
-    function calculator(h, m, s, nums) {
-        console.log(nums);
-        var now = new Date();
-        var seconds = now.getSeconds();
-        var minutes = now.getMinutes();
-        var hour = now.getHours();
-
-        if ((minutes - m) < 0) {
-            dt_h = Math.abs(hour - h - 1) * 3600;
-            dt_m = (60 - Math.abs(minutes - m)) * 60;
-            dt_s = Math.abs(seconds - s);
-        }
-        else {
-            dt_h = Math.abs(hour - h) * 3600;
-            dt_m = Math.abs(minutes - m) * 60;
-            dt_s = Math.abs(seconds - s);
-        }
-
-
-        {% comment %}$("#fullmin").text(parseInt((dt_h + dt_m + dt_s) / 60));
-        $("#fullhour").text(Math.abs(hour - h));
-        $("#point").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))));
-        $("#min").text(Math.abs(minutes - m));
-        $("#price").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500);{% endcomment %}
-        $("#min").text(Math.abs(minutes - m));
-        $("#totalprice").text((parseInt(Math.round((dt_h + dt_m + dt_s) / 225))) * 500 * nums);
-
-    };
-
-    function refill_value(id) {
-        $('input[name=deleted_id]').val(id);
-    };
-</script>
 </body>
 </html>

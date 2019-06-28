@@ -228,7 +228,31 @@
                 <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
                 <input type="text" class="form-control" id="text" name="card" autocomplete="off">
             </div>
-            <button style="direction: rtl" name="addcredit" value="true" type="submit" class="btn btn-default">اضافه کن!</button>
+            <button style="direction: rtl" name="addcredit" value="true" type="submit" class="btn btn-default">اضافه
+                کن!
+            </button>
+        </form>
+        <div id="addgame" class="jumbotron">
+            <p style="text-align: center">اضافه کردن کد تخفیف به کاربر</p>
+        </div>
+        <form class="thumbnail" action="" method="post">
+            {% csrf_token %}
+            {% if is_done_add_gift_code == 1 %}
+                <div style="text-align: right;direction: rtl;" class="panel-group">
+                    <div class="panel panel-success">
+                        <div class="panel-body">عملیات با موفقیت انجام شد.</div>
+                    </div>
+                </div>
+            {% endif %}
+            <div class="form-group">
+                <label for="text">کد:</label>
+                <input type="text" class="form-control" id="text" name="code" autocomplete="off">
+                <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>
+                <input type="text" class="form-control" id="text" name="card" autocomplete="off">
+            </div>
+            <button style="direction: rtl" name="add_gift_code" value="true" type="submit" class="btn btn-default">اضافه
+                کن!
+            </button>
         </form>
         <div class="space-top"></div>
     </div>
