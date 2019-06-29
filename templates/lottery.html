@@ -84,7 +84,8 @@
                     <label for="text">تاریخ پایان</label>
                     <input type="text" class="form-control" id="text" name="end_date" autocomplete="off">
                 </div>
-                <button name="start_lottery" value="true" type="submit" class="btn btn-success">قرعه کشی و تعیین برنده</button>
+                <button name="start_lottery" value="true" type="submit" class="btn btn-success">قرعه کشی و تعیین برنده
+                </button>
             {% endif %}
             {% if is_success_start_lottery == 1 and is_success_submit_lottery == 0 %}
                 <div class="form-group">
@@ -109,7 +110,21 @@
             {% endif %}
         </form>
     </div>
-
+    <a href="/addgame">
+        <button class="btn btn-success"
+                style="font-size: 25px;padding: 9px 10px 0 9px;border-radius: 50%;position: absolute;bottom: 5%;right: 54%;">
+            <i class="glyphicon glyphicon-home"></i></button>
+    </a>
+    <a href="/user_gifts">
+        <button class="btn btn-success"
+                style="font-size: 25px;padding: 9px 10px 0 9px;border-radius: 50%;position: absolute;bottom: 5%;right: 50%;">
+            <i class="glyphicon glyphicon-gift"></i></button>
+    </a>
+    <a href="/lottery-list">
+        <button class="btn btn-success"
+                style="font-size: 25px;padding: 9px 10px 0 9px;border-radius: 50%;position: absolute;bottom: 5%;right: 46%;">
+            <i class="glyphicon glyphicon-list"></i></button>
+    </a>
 </div>
 </body>
 </html>

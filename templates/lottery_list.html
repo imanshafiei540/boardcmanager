@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INFO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <style>
+        body {
+            font-family: IRANSans;
+            background-color: #e2e6c6;
+            color: #123a52;
+        }
+
+        .space-top {
+            margin-top: 100px;
+        }
+
+        th {
+            text-align: right;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        label {
+            text-align: right;
+            direction: rtl;
+            float: right;
+
+        }
+
+        input {
+            text-align: right;
+        }
+
+        .jumbotron p {
+            color: white !important;
+            font-weight: 700;
+        }
+
+        p {
+            color: #123a52 !important;
+        }
+
+        table tr {
+            background-color: transparent !important;
+        }
+
+        .datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
+            top: 60px !important;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-md-offset-2 col-md-8">
+        <div style="text-align: center;margin-bottom: 10px!important;background-color: #59a1ab;margin-top: 5%" class="jumbotron">
+            <p style="text-align: center">لیست قرعه‌کشی ها</p></div>
+
+        <table style="direction: rtl" class="table table-striped">
+            <thead>
+            <tr>
+                <th>تاریخ شروع</th>
+                <th>تاریخ پایان</th>
+                <th>نام جایزه</th>
+                <th>نام برنده</th>
+                <th>وضعیت جایزه</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for element in lot_data %}
+
+                <tr>
+                    <td>{{ element.start_date }}</td>
+                    <td>{{ element.end_date }}</td>
+                    <td>{{ element.prize }}</td>
+                    <td>{{ element.name }}</td>
+                    <td>
+                            {% if element.is_give == 1 %}
+                                <span><i class="glyphicon glyphicon-ok"></i></span>{% endif %}
+                            {% if element.is_give == 0 %}
+                                <span><i class="glyphicon glyphicon-remove"></i></span>{% endif %}
+                        </td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<a href="/addgame">
+    <button class="btn btn-success"
+            style="font-size: 25px;padding: 9px 10px 0 9px;border-radius: 50%;position: fixed;bottom: 5%;right: 5%;">
+        <i class="glyphicon glyphicon-home"></i></button>
+</a>
+</body>
+</html>

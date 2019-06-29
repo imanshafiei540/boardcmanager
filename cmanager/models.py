@@ -38,7 +38,7 @@ class Game(models.Model):
     end_time = models.TimeField(null=True, default="00:00")
     numbers = models.IntegerField(null=False)
     add_date = models.DateField(null=False)
-    points = models.IntegerField(null=False)
+    points = models.IntegerField(null=False, default=0)
 
     def __str__(self):
         return str(self.user.card_number) + " + " + str(self.user.last_name)

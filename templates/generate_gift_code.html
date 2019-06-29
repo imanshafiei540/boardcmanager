@@ -94,9 +94,16 @@
             </div>
             <button value="true" type="submit" class="btn btn-success">تولید</button>
             {% if is_success == 1 %}
-                <a href="/public/{{ excel_link }}"><button value="true" type="submit" class="btn btn-info">دانلود فایل اکسل</button></a>
+                <a href="/public/{{ excel_link }}">
+                    <button value="true" type="submit" class="btn btn-info">دانلود فایل اکسل</button>
+                </a>
             {% endif %}
         </form>
+        <a href="/addgame">
+            <button class="btn btn-success"
+                    style="font-size: 25px;padding: 9px 10px 0 9px;border-radius: 50%;position: fixed;bottom: 5%;right: 50%;">
+                <i class="glyphicon glyphicon-home"></i></button>
+        </a>
     </div>
 
 </div>

@@ -80,7 +80,7 @@
 
 {% if user_data %}
     <div class="container-fluid">
-        <div class="col-md-12">
+        <div class="col-md-offset-1 col-md-10">
             <div class="space-top"></div>
             <table style="direction: rtl" class="table table-striped">
                 <thead>
@@ -113,14 +113,16 @@
             </table>
         </div>
 
-
-
     </div>
-        <p style="text-align: center">کل هزینه: {{ sum }}</p>
+    <p style="text-align: center">کل هزینه: {{ sum }}</p>
     <p style="text-align: center">کل هزینه بدون تخفیف: {{ without }}</p>
 
     <p style="text-align: center"> تخفیف: {{ off }}</p>
 {% endif %}
-
+<a href="/addgame">
+    <button class="btn btn-success"
+            style="font-size: 25px;padding: 9px 10px 0 9px;border-radius: 50%;position: fixed;bottom: 5%;right: 5%;">
+        <i class="glyphicon glyphicon-home"></i></button>
+</a>
 </body>
 </html>

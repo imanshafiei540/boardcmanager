@@ -27,6 +27,9 @@ urlpatterns = [
     url(r'^deleterow', views.delete_row),
     url(r'^userinfo', views.user_info),
     url(r'^gencode', views.generate_gift_code),
+    url(r'^lottery-list', views.lottery_list),
     url(r'^lottery', views.lottery),
+    url(r'^user_gifts', views.user_gifts),
+    url(r'^give_prize', views.give_prize),
     url(r'public/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
