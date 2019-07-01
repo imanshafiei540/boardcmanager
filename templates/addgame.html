@@ -93,6 +93,7 @@
                 <th>ساعت پایان</th>
                 <th>هزینه</th>
                 <th>واحد</th>
+                <th>تخفیف خاص</th>
                 <th>میزان تخفیف</th>
                 <th>جایزه</th>
                 <th>حذف سطر</th>
@@ -109,6 +110,7 @@
                         <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
                         <td style="font-weight: 700">{{ element.price }}</td>
                         <td style="font-weight: 700">{{ element.point }}</td>
+                        <td style="font-weight: 700">{{ element.user_obj.promotion.name }}</td>
                         <td style="font-weight: 700">{{ element.credit }}</td>
                         <td>
                             {% if element.has_prize == 1 %}
@@ -138,6 +140,7 @@
                         <td>{{ element.user_obj.end_time | date:"G:i:s" }}</td>
                         <td style="font-weight: 700">{{ element.price }}</td>
                         <td style="font-weight: 700">{{ element.point }}</td>
+                        <td style="font-weight: 700">{{ element.user_obj.promotion.name }}</td>
                         <td style="font-weight: 700">{{ element.credit }}</td>
                         <td>
                             {% if element.has_prize == 1 %}
@@ -174,6 +177,13 @@
                 </div>
             {% endif %}
             <div class="form-group">
+                <label for="text">حالت‌های خاص تخفیفی</label>
+                <select name="promotion" style="height: 40px;direction: rtl" class="form-control">
+                    <option value="0">هیچکدام</option>
+                    {% for pro in all_promotions %}
+                        <option value="{{ pro.pk }}">{{ pro.fields.name }}</option>
+                    {% endfor %}
+                </select>
                 <label for="text">تعداد نفرات (تنها برای شروع بازی وارد شود ):</label>
                 <input type="text" class="form-control" id="text" name="numbers" autocomplete="off">
                 <label for="text">شماره کارت ( در انتها کارت کشیده شود ):</label>

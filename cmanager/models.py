@@ -31,6 +31,11 @@ class UserAdmin(admin.ModelAdmin):
     search_fields = ('fisrt_name', 'last_name', 'card_number', 'phone')
 
 
+class Promotions(models.Model):
+    name = models.CharField(max_length=30, null=False)
+    discount_price = models.IntegerField(null=False)
+
+
 class Game(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
     credit_used = models.IntegerField(default=0, null=False)
@@ -39,6 +44,7 @@ class Game(models.Model):
     numbers = models.IntegerField(null=False)
     add_date = models.DateField(null=False)
     points = models.IntegerField(null=False, default=0)
+    promotion = models.ForeignKey(to=Promotions, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return str(self.user.card_number) + " + " + str(self.user.last_name)

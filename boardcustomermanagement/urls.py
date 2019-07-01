@@ -31,5 +31,6 @@ urlpatterns = [
     url(r'^lottery', views.lottery),
     url(r'^user_gifts', views.user_gifts),
     url(r'^give_prize', views.give_prize),
+    url('', views.home),
     url(r'public/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
