@@ -75,19 +75,19 @@ def addgame(request):
                             if end.hour == 0 or end.hour == 1 or end.hour == 2 or end.hour == 3:
                                 t_one = timedelta_end_of_the_day - timedelta_start
                                 t_two = timedelta_end - timedelta_start_of_the_day
-                                point_one = round(float(t_one.total_seconds() / 225) * current_game[0].numbers)
-                                point_two = round(float(t_two.total_seconds() / 225) * current_game[0].numbers)
+                                point_one = round(float(t_one.total_seconds() / 225))
+                                point_two = round(float(t_two.total_seconds() / 225))
                                 point = point_one + point_two
                             else:
                                 t_one = timedelta_end - timedelta_start
                                 t_two = 0
-                                point_one = round(float(t_one.total_seconds() / 225) * current_game[0].numbers)
+                                point_one = round(float(t_one.total_seconds() / 225))
                                 point_two = 0
                                 point = point_one + point_two
                         else:
                             t = timedelta_end - timedelta_start
-                            point = round(float(t.total_seconds() / 225) * current_game[0].numbers)
-                        price = point * 500
+                            point = round(float(t.total_seconds() / 225))
+                        price = point * 500 * current_game[0].numbers
                         if current_game[0].promotion:
                             current_game[0].credit_used = payment(card_number, price,
                                                                   current_game[0].promotion.discount_price)
@@ -139,7 +139,7 @@ def addgame(request):
         if str(end) != "00:00:00":
             timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
             t = timedelta_end - timedelta_start
-            point = round(float(t.total_seconds() / 225) * e.numbers)
+            point = round(float(t.total_seconds() / 225))
             credit = e.credit_used
             has_prize = 0
             user_gifts = Lottery.objects.filter(user=e.user)
@@ -148,7 +148,7 @@ def addgame(request):
                     has_prize = 1
                     break
 
-            users_list.append({'user_obj': e, "price": point * 500, 'point': point, "end": 1,
+            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point, "end": 1,
                                "credit": credit, 'has_prize': has_prize})
     hour_of_now = datetime.datetime.now().hour
     if hour_of_now == 0 or hour_of_now == 1 or hour_of_now == 2 or hour_of_now == 3:
@@ -165,13 +165,13 @@ def addgame(request):
                                     start.hour != 0 and start.hour != 1 and start.hour != 2):
                     t_one = timedelta_end_of_the_day - timedelta_start
                     t_two = timedelta_end - timedelta_start_of_the_day
-                    point_one = round(float(t_one.total_seconds() / 225) * e.numbers)
-                    point_two = round(float(t_two.total_seconds() / 225) * e.numbers)
+                    point_one = round(float(t_one.total_seconds() / 225))
+                    point_two = round(float(t_two.total_seconds() / 225))
                     point = point_one + point_two
                 else:
                     t_one = timedelta_end - timedelta_start
                     t_two = 0
-                    point_one = round(float(t_one.total_seconds() / 225) * e.numbers)
+                    point_one = round(float(t_one.total_seconds() / 225))
                     point_two = 0
                     point = point_one + point_two
 
@@ -182,7 +182,7 @@ def addgame(request):
                     if gift.is_give_prize == 0:
                         has_prize = 1
                         break
-                users_list.append({'user_obj': e, "price": point * 500,
+                users_list.append({'user_obj': e, "price": point * 500 * e.numbers,
                                    'point': point, "end": 1,
                                    "credit": credit, 'has_prize': has_prize})
 
@@ -261,8 +261,8 @@ def user_info(request):
             if str(end) != "00:00:00":
                 timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
                 t = timedelta_end - timedelta_start
-                point = round(float(t.total_seconds() / 225) * e.numbers)
-                sum_user += point * 500
+                point = round(float(t.total_seconds() / 225))
+                sum_user += point * 500 * e.numbers
                 if t.total_seconds() % 3600 > 900:
                     without_membership_point = int(t.total_seconds() / 3600) + 1
                     without_membership_price = without_membership_point * 8000 * e.numbers
@@ -487,8 +487,8 @@ def info(request):
                     if str(end) != "00:00:00":
                         timedelta_end = datetime.timedelta(hours=end.hour, minutes=end.minute, seconds=end.second)
                         t = timedelta_end - timedelta_start
-                        point = round(float(t.total_seconds() / 225) * target.numbers)
-                        price = point * 500
+                        point = round(float(t.total_seconds() / 225))
+                        price = point * 500 * target.numbers
                         if t.total_seconds() % 3600 > 0:
                             without_memebership_point = int(t.total_seconds() / 3600) + 1
 
