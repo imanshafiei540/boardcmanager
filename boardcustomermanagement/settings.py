@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'boardcustomermanagement.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, '../../Desktop/db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'C:/Users/CafeBoard/Dropbox/CafeBoard/db.sqlite3'),
     }
 }
 

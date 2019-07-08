@@ -148,7 +148,7 @@ def addgame(request):
                     has_prize = 1
                     break
 
-            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point, "end": 1,
+            users_list.append({'user_obj': e, "price": point * 500 * e.numbers, 'point': point * e.numbers, "end": 1,
                                "credit": credit, 'has_prize': has_prize})
     hour_of_now = datetime.datetime.now().hour
     if hour_of_now == 0 or hour_of_now == 1 or hour_of_now == 2 or hour_of_now == 3:
@@ -183,7 +183,7 @@ def addgame(request):
                         has_prize = 1
                         break
                 users_list.append({'user_obj': e, "price": point * 500 * e.numbers,
-                                   'point': point, "end": 1,
+                                   'point': point * e.numbers, "end": 1,
                                    "credit": credit, 'has_prize': has_prize})
 
     today_users_not_end = Game.objects.filter(add_date=datetime.datetime.now().date()).order_by('-start_time')
@@ -272,7 +272,7 @@ def user_info(request):
                     without_membership_price = without_membership_point * 8000 * e.numbers
                     without_membership_price_variable += without_membership_price
                 users_list.append(
-                    {'user_obj': e, "price": point * 500, 'point': point})
+                    {'user_obj': e, "price": point * 500, 'point': point * e.numbers})
 
         return render(request, 'userinfo.html',
                       {"user_data": users_list, "sum": sum_user, "without": without_membership_price_variable,
